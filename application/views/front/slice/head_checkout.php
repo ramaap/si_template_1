@@ -13,4 +13,5 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>include/front/css/jquery.bxslider.css" media="all">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>include/front/css/checkout.css" media="all">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>include/front/css/general.css" media="all">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>include/front/css/pages.css">
 	</head>

@@ -11,5 +11,6 @@
 	<script src="<?php echo base_url(); ?>include/front/js/jquery.bxslider.min.js"></script>
 	<link href="<?php echo base_url(); ?>include/front/css/jquery.bxslider.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>include/front/css/general.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>include/front/css/pages.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>include/front/css/catalog.css">
 </head>

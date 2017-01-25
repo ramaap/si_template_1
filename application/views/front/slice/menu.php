@@ -12,6 +12,7 @@
 					<li><a href="<?php echo site_url('front/what_we') ?>">What we make</a></li>
 					<li><a href="<?php echo site_url('front/contact') ?>">Contact</a></li>
 					<li><a href="<?php echo site_url('front/question') ?>">Question?</a></li>
+					<li><a href="<?php echo site_url('front/custom_order') ?>">Custom</a></li>
 				</ul>
 			</div>
 			<div class="menu-action">
@@ -24,8 +25,18 @@
 								  ")->row();
 				?>
 					<div class="login">
-						<!-- Welcome, <?php echo $this->session->userdata('user_name')?><br/> -->
-						<a href="<?php echo site_url('front/login_customer/logout')?>">Log out</a>
+						<em class="user-logo"></em>
+					</div>
+					<div class="user-menu" style="display:none;">
+						<ul>
+							<li>
+								<!-- Welcome, <?php echo $this->session->userdata('user_name')?><br/> -->
+								<a href="<?php echo site_url('front/login_customer/logout')?>">Log out</a>
+							</li>
+							<li>
+								<a href="<?php echo site_url('front/user_profile')?>">User Profile</a>
+							</li>
+						</ul>
 					</div>
 					<div class="separator"></div>
 					<div class="cart">
@@ -56,6 +67,10 @@
 				    $(".tab-menu").click(function(event) {
 				        event.preventDefault();
 				        $("#menu-mobile").slideToggle();
+				    });
+				    $(".user-logo").click(function(event) {
+				        event.preventDefault();
+				        $(".user-menu").slideToggle();
 				    });
 				});
 			</script>

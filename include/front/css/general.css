@@ -104,7 +104,7 @@ header .page-header-container div.menu-nav li{
     display: inline;
     margin: 20px;
     line-height: 50px;
-    font-size: 24px;
+    font-size: 20px;
 }
 header .page-header-container div.menu-nav li a{
 	text-decoration: none;
@@ -115,6 +115,45 @@ header .page-header-container div.menu-action{
 	float: right;
 	max-width: 357px;
     width: 18%;
+    position: relative;
+}
+header .page-header-container div.menu-action .user-menu{
+    position: absolute;
+    background: white;
+    border: 1px solid grey;
+    left: 0;
+    bottom: -60px;
+    z-index: 999;
+    padding: 10px 20px;
+}
+header .page-header-container div.menu-action .user-menu li{
+	list-style: none;
+}
+header .page-header-container div.menu-action .user-menu li a{
+	color: black;
+	font-family: 'harmonia-black';
+}
+header .page-header-container div.menu-action .user-menu li a:hover{
+	text-decoration: none;
+	color: black;
+}
+header .page-header-container div.menu-action .user-menu ul{
+	padding:0px;
+}
+header .page-header-container div.menu-action .login .user-logo{
+	background-image: url(../images/header/user.png);
+	background-position: 0px 0;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display: block;
+	height: 40px;
+	width: 40px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-size: 40px;
+	float: left;
+	cursor: pointer;
 }
 header .page-header-container div.menu-action>div{
 	float: left;

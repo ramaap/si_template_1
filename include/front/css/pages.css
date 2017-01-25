@@ -1,0 +1,19 @@
+/*user-dashboard Start*/
+	.dashboard .sidemenu{
+		float: left;
+		width: 25%;
+		padding-right: 20px;
+	}
+	.dashboard .main-content{
+		float: left;
+		width: 75%;
+	}
+	.dashboard .main-content .tab-content{
+		display: none;
+	}
+	.dashboard .main-content .tab-content.current{
+		display: block;
+	}
+
+
+/*user-dashboard End*/
