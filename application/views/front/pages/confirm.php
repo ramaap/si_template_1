@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-2">
+<body class="confirm">
 <?php $this->load->view('front/slice/menu');
 
  if ($this->session->userdata('alert') != '')
@@ -50,8 +50,9 @@
 								<textarea name="ket" required id="ket" placeholder="Keterangan"></textarea>
 							</li>
 						</ul>
-				</div>
 						<input type="submit" id="button" name="simpan" value="Submit"  class="btn btn-success" />
+				</div>
+						
 					<?php echo form_close(); ?>  
 			</div>
 		</div>
