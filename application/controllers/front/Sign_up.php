@@ -43,8 +43,8 @@ class sign_up extends CI_Controller {
 					'customer_email' => urldecode($_POST['customer_email']),
 					'customer_telp' => urldecode($_POST['customer_telp']),
 					'customer_alamat' => urldecode($_POST['customer_alamat']),
-					'customer_provinsi' => urldecode($_POST['customer_provinsi']),
-					'customer_kota' => urldecode($_POST['customer_kota']),
+					'customer_provinsi_id' => urldecode($_POST['customer_provinsi_id']),
+					'customer_kota_id' => urldecode($_POST['customer_kota']),
 					'customer_kecamatan' => urldecode($_POST['customer_kecamatan']),
 					'customer_kode_pos' => urldecode($_POST['customer_kode_pos']),
 					'last_update' => date("y-m-d h:i:s")

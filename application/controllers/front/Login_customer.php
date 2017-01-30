@@ -33,7 +33,7 @@ class login_customer extends CI_Controller {
 
     public function logout() {
         $this->lib->logout_customer();  
-        $this->load->view('front/home');
+        redirect('front/home/'); 
     }
 
     /* public function pass() { 

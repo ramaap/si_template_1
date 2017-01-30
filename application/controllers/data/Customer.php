@@ -28,6 +28,10 @@ class customer extends CI_Controller {
         $this->lib->check_session();
         redirect('data/customer');
     }
+    public function go_to_detail() {
+        $this->lib->check_session();
+        $this->session->set_userdata("customer_id", $_POST["datamodel"]);
+    }
 
     public function customer_show_by_id() { //kirim data buat form edit	
         $this->lib->check_session();
@@ -42,9 +46,9 @@ class customer extends CI_Controller {
             $temp['customer_email'] = $tmp->customer_email;
             $temp['customer_telp'] = $tmp->customer_telp;
             $temp['customer_alamat'] = $tmp->customer_alamat;
-            $temp['customer_provinsi'] = $tmp->customer_provinsi;
+            $temp['customer_provinsi_id'] = $tmp->customer_provinsi_id;
+            $temp['customer_kota_id'] = $tmp->customer_kota_id;
             $temp['customer_kecamatan'] = $tmp->customer_kecamatan;
-            $temp['customer_kota'] = $tmp->customer_kota;
             $temp['customer_kode_pos'] = $tmp->customer_kode_pos;
             $temp['is_delete'] = $tmp->is_delete;
             $temp['is_permanent'] = $tmp->is_permanent;
@@ -68,9 +72,9 @@ class customer extends CI_Controller {
             $temp['customer_email'] = $tmp->customer_email;
             $temp['customer_telp'] = $tmp->customer_telp;
             $temp['customer_alamat'] = $tmp->customer_alamat;
-            $temp['customer_provinsi'] = $tmp->customer_provinsi;
+            $temp['nama_prov'] = $tmp->nama_prov;
             $temp['customer_kecamatan'] = $tmp->customer_kecamatan;
-            $temp['customer_kota'] = $tmp->customer_kota;
+            $temp['kota'] = $tmp->kota;
             $temp['customer_kode_pos'] = $tmp->customer_kode_pos;
             $temp['is_delete'] = $tmp->is_delete;
             $temp['is_permanent'] = $tmp->is_permanent;

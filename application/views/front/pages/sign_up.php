@@ -4,6 +4,14 @@
 <body class="checkout-2">
 <?php $this->load->view('front/slice/menu'); ?>
 
+ <script type="text/javascript">
+			function get_lokasi()
+			{
+				$.post("<?php echo site_url('rajaongkir/getCity') ?>/"+$('#customer_provinsi_id').val(),function(obj){
+					$('#customer_kota').html(obj);
+				});
+			}
+ </script>
 	<div class="main container">
 		<div class="cart-checkout">
 			<div>
@@ -36,10 +44,15 @@
 								<textarea type="text" name="customer_alamat" class="form-control" placeholder="Alamat" ></textarea>
 							</div>
 							<div class="email">
-								<input type="text" name="customer_provinsi" class="form-control" placeholder="Provinsi" >
+								<select class="form-control" name="customer_provinsi_id" id="customer_provinsi_id" onchange="get_lokasi()" >
+								<option>--Pilih Provinsi--</option>
+									<?php $this->load->view('rajaongkir/getProvince'); ?>
+								</select>
 							</div>
 							<div class="email">
-								<input type="text" name="customer_kota" class="form-control" placeholder="Kota">
+								<select class="form-control" name="customer_kota" id="customer_kota">
+								<option value="" selected="" disabled="">Pilih Kota</option>
+								</select>
 							</div>
 							<div class="email">
 								<input type="text" name="customer_kecamatan" class="form-control" placeholder="Kecamatan">

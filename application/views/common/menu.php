@@ -75,8 +75,8 @@ function pembayaran () {
                     </ul>
                 </li>
                 <li class=""><a  class="menu" href="<?php echo site_url("data/customer/show"); ?>"><i class="fa fa-fw fa-users"></i>&nbsp;&nbsp;Pengelolaan Member</a></li>
-                <li class=""><a  class="menu" href="<?php echo site_url("data/customer/show"); ?>"><i class="fa fa-fw fa-list-ol"></i>&nbsp;&nbsp;Pengelolaan Order</a></li>
-                <li class=""><a  class="menu" href="<?php echo site_url("data/customer/show"); ?>"><i class="fa fa-fw fa-list-ol"></i>&nbsp;&nbsp;Pengelolaan Custom Order</a></li>
+                <li class=""><a  class="menu" href="<?php echo site_url("data/order/show"); ?>"><i class="fa fa-fw fa-list-ol"></i>&nbsp;&nbsp;Order</a></li>
+                <li class=""><a  class="menu" href="<?php echo site_url("data/custom_order_admin/show"); ?>"><i class="fa fa-fw fa-list-ol"></i>&nbsp;&nbsp; Custom Order</a></li>
                 <li class=""><a  class="menu" href="<?php echo site_url("data/customer/show"); ?>"><i class="fa fa-fw fa-file"></i>&nbsp;&nbsp;Laporan</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

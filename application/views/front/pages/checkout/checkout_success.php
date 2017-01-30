@@ -47,7 +47,7 @@
 					<img src="<?php echo base_url(); ?>include/front/images/checkout/success.jpg">
 				</div>
 				<h3>Terima kasih sudah memesan</h3>
-				<h3>Pesanan anda dengan kode <strong>PX-09128309</strong> segera kami proses</h3>
+				<h3>Pesanan anda dengan kode <strong><?php echo $order->order_no; ?></strong> segera kami proses</h3>
 				<div class="attention">
 					<p>*Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam</p>
 					<p>*Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam</p>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="container">
 					<div class="left column">
-						<strong>IDR 34.000,-</strong>
+						<strong>IDR <?php echo number_format($order->total,0,",",".").",-"; ?></strong>
 						<p>ke</p>
 					</div>
 					<div class="right column">
@@ -89,7 +89,7 @@
 				<h3>Sudah Melakukan Pembayaran?</h3>
 				<div class="payed">
 					<div class="button-payed">
-						<a href="../index.html">
+						<a href="<?php echo site_url("front/confirm"); ?>">
 								<span>
 									Konfirmasi Pembayaran
 								</span>

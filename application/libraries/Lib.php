@@ -54,6 +54,7 @@ class lib {
         $CI->session->set_userdata('role_id', $user->role_id);
         $CI->session->set_userdata('role_nama', $user->role_nama);
         $CI->session->set_userdata('user_name', $user->customer_nama);
+        $CI->session->set_userdata('customer_id', $user->customer_id);
         $CI->load->model('data_user_customer');
         
         $CI->data_user_customer->update_last_login($user->user_id);
