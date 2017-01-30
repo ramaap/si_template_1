@@ -60,6 +60,7 @@
 					<li><a href="<?php echo site_url('front/what_we') ?>">What we make</a></li>
 					<li><a href="<?php echo site_url('front/contact') ?>">Contact</a></li>
 					<li><a href="<?php echo site_url('front/question') ?>">Question?</a></li>
+					<li><a href="<?php echo site_url('front/custom_order') ?>">Custom</a></li>
 				</ul>
 			</div>
 			<script type="text/javascript">

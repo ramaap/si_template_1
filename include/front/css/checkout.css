@@ -22,6 +22,12 @@ li{
     text-decoration: none;
     font-size: 35px;
 }
+body.checkout-1 .main.container,
+body.checkout-2 .main.container,
+body.checkout-3 .main.container,
+body.checkout-4 .main.container{
+    margin-top: 40px;
+}
 body.checkout-1 .stage.one .round{
     background: #ffcf3e;
 }
@@ -83,12 +89,14 @@ a:focus, a:hover{
 .detail-product .detail .items {
     line-height: 35px;
     margin: 10px;
+    overflow: hidden;
 }
 .detail-product .detail .items label{
     min-width: 130px;
+    float: left;
 }
 .detail-product .detail .items select{
-    float: right;
+    float: left;
     min-width: 360px;
     height: 40px;
 }
@@ -168,6 +176,19 @@ a:focus, a:hover{
     min-width: 140px;
     border-top: 2px solid #385379;
     margin: 20px 0px;
+}
+.cart-checkout .billing input#button{
+    cursor: pointer;
+    background: #ffcf3e;
+    position: absolute;
+    width: 165px;
+    padding: 8px 11px;
+    bottom: -16px;
+    font-family: 'harmonia-light';
+    right: 13px;
+    border-radius: 0;
+    color: black;
+    border: 0px;
 }
 
 /*login start*/
@@ -261,6 +282,9 @@ a:focus, a:hover{
     border-radius: 8px;
     border: 1px solid grey;
     padding: 0px 10px;
+}
+.cart-checkout .shipping input[type=radio]{
+    width: auto;
 }
 .cart-checkout .shipping textarea,
 .cart-checkout .billing textarea{
@@ -439,4 +463,101 @@ body.checkout-4 .etc .button-back span{
     padding: 10px 10px;
     background: #ffcf3e;
     color: rgb(96, 125, 139);
+}
+
+/*responsive*/
+
+@media only screen and (max-width: 770px) {
+    /*checkout 1*/
+    body.checkout-1 .main.container,
+    body.checkout-2 .main.container,
+    body.checkout-3 .main.container,
+    body.checkout-4 .main.container{
+        margin-top: 0px;
+    }
+    .stages,
+    .stage{position: relative;}
+    .stages {
+        border-top: 1px solid grey;
+        max-width: 750px;
+        margin-top: 20px;
+        position: relative;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid grey;
+        padding-bottom: 20px;
+    }
+    .stages .stage{
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        float: none;
+        overflow: hidden;
+    }
+    .stage .round-container{
+        margin-right: 20px;
+        float: left;
+        width: auto;
+    }
+    .stage >span{
+        float: left;
+        margin-top: 0px;
+        line-height: 30px;
+    }
+    .stage .round {
+        padding: 0px 7px;
+        background: grey;
+        border-radius: 50px;
+        color: #00003f;
+        text-decoration: none;
+        font-size: 21px;
+    }
+    .detail-product .detail {
+        float: left;
+        width: 65%;
+        padding-left: 40px;
+        margin-left: 0px;
+        margin-top: 0px; 
+    }
+    .detail-product .detail .items select {
+        min-width: 250px;
+        width: 250px;
+    }
+
+    /*checkout 2*/
+    .cart-checkout .cart-container {
+        max-width: 100%;
+        margin: 20px auto;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .detail-product .image {
+        float: none;
+        width: 35%;
+        margin: 0 auto;
+    }
+    .detail-product .detail {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .detail-product .detail .items select,
+    .cart-checkout .shipping input, 
+    .cart-checkout .billing input,
+    .cart-checkout .shipping textarea, .cart-checkout .billing textarea,
+    .cart-checkout .shipping select, .cart-checkout .billing select {
+        width: 100%;
+    }
+    .detail-product .detail button {
+        margin-left: 0px;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    .cart-checkout .cart-container img{
+        width: 100% !important;
+        height: auto !important;
+    }
+
 }

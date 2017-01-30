@@ -1,19 +1,123 @@
+/*general*/
+li{list-style: none}
+ul{padding: 0px;}
+a{color: #385379;}
+a:hover{text-decoration: none;}
+
 /*user-dashboard Start*/
-	.dashboard .sidemenu{
-		float: left;
-		width: 25%;
-		padding-right: 20px;
-	}
-	.dashboard .main-content{
-		float: left;
-		width: 75%;
-	}
-	.dashboard .main-content .tab-content{
-		display: none;
-	}
-	.dashboard .main-content .tab-content.current{
-		display: block;
-	}
+.dashboard .sidemenu{
+    float: left;
+    width: 23%;
+    margin-right: 20px;
+    min-height: 300px;
+}
+.dashboard .sidemenu a:hover{
+	color: #ffcf3e;
+}
 
-
+.dashboard .main-content{
+	float: left;
+	width: 75%;
+}
+.dashboard .main-content label{
+	width: 150px;
+	float: left;
+	line-height: 40px;
+}
+.dashboard .main-content input,
+.dashboard .main-content textarea,
+.dashboard .main-content select{
+    min-width: 250px;
+    width: 320px;
+    height: 40px;
+	padding: 10px;
+}
+.dashboard .main-content textarea{
+	min-height: 200px;
+}
+.dashboard .main-content li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.dashboard .main-content .tab-content{
+	display: none;
+}
+.dashboard .main-content .tab-content.current{
+	display: block;
+}
+.dashboard .main-content .check-shipping input{
+	padding: 10px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+.dashboard .main-content input#button,
+.dashboard .main-content .check-shipping input#button{
+    background-color: #385379;
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+}
 /*user-dashboard End*/
+
+/*custom order start*/
+.custom .main.container label{
+	width: 150px;
+	float: left;
+	line-height: 40px;
+}
+.custom .main.container li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.custom .main.container input,
+.custom .main.container textarea,
+.custom .main.container select{
+    min-width: 250px;
+    width: 320px;
+    height: 40px;
+	padding: 10px;
+}
+.custom .main.container textarea{
+	min-height: 200px;
+}
+.custom .main.container input#button{
+    background-color: #385379;
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+}
+/*custom order end*/
+
+/*responsive*/
+
+@media only screen and (max-width: 770px) {
+	.dashboard .main-content,
+	.dashboard .sidemenu{width: 100%;}
+	.dashboard .sidemenu{
+		min-height: auto;
+	    margin-right: 0px;
+	    border-bottom: 1px solid grey;
+	    padding-bottom: 20px;
+	}
+	.custom .main.container input,
+	.custom .main.container textarea,
+	.custom .main.container select,
+	.dashboard .main-content input,
+	.dashboard .main-content textarea,
+	.dashboard .main-content select,
+	.main.container iframe{
+		width: 100%;
+    	margin-left: 0px !important;
+	}
+	.dashboard .main-content .check-shipping input{
+		margin-bottom: 20px;
+	}
+}

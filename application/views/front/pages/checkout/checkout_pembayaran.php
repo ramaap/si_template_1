@@ -411,9 +411,10 @@
 								<option value="0" selected="" disabled="">Ongkir Belum Tersedia</option>
 								</select>
 							</li>
-				  </div>
 						</ul>
 						<input type="submit" id="button" name="simpan" value="Lanjutkan Pemesanan"  class="btn btn-success" />
+				  </div>
+						
 					<?php echo form_close(); ?>  
 				</div>
 			</div>
