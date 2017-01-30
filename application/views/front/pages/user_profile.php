@@ -89,6 +89,7 @@
  </script>
 	<div class="main container">
 		<div class="sidemenu">
+			<h3>Dashboard</h3>
 			<ul>
 				<li class="current"><a href="#tab1">Profile</a></li>
 				<li ><a href="#tab2">My History Order</a></li>
@@ -145,6 +146,7 @@
 				</div>
 			</div>
 			<div class="tab-content history" id="tab2">
+				<h2>History Order</h2>
 			<!--Angular untuk tampil history order-->
 			     <div ng-controller="DemoCtrl">
 					<div class="row" >
@@ -192,13 +194,16 @@
 			<!--Angular untuk tampil history order-->
 			</div>
 			<div class="tab-content shipping-address" id="tab3">
+				<h2>Shipping Address</h2>
 				<iframe   style="    margin-left: -28px;" frameborder="0" height="470px" width="1300px" src="<?php echo site_url('front/alamat') ?>"></iframe>
 			</div>
 			<div class="tab-content check-shipping" id="tab4">
-				Masukkan No Resi Pengiriman<br />
+				<h2>Check Shipping</h2>
+				<p>Masukkan No Resi Pengiriman</p>
+				<br />
 				<form method="get" action="http://www.cekresi.com" target="_BLANK">
 				<input type="text" placeholder="Masukkan no Resi..." name="noresi" />
-				<input type="submit" value="cek resi" />
+				<input type="submit" value="cek resi" id="button"/>
 				<br />
 				</form>
 			</div>

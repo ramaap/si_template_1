@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_home'); ?>
-<body class="checkout-2">
+<body class="custom">
 <?php $this->load->view('front/slice/menu');
 
  if ($this->session->userdata('alert') != '')

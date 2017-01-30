@@ -90,7 +90,7 @@ header .page-header-container div.menu-mobile-container .tab-menu{
 header .page-header-container div.menu-mobile-container li{
 	list-style: none;
     float: left;
-    width: calc(100%/4);
+    width: calc(100%/5);
     text-align: center;
     line-height: 40px;
 }
