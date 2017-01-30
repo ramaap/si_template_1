@@ -34,11 +34,13 @@
 						<strong>Deluxe Flyer</strong>
 						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
 						<p>Harga Mulai IDR18000 / box</p>
-						<button>
-							<span>
-								<span>Order ></span>
-							</span>
-						</button>
+						<a href="">
+							<button>
+								<span>
+									<span>Order ></span>
+								</span>
+							</button>
+						</a>
 					</div>
 				</div>
 				<div class="clear"></div>

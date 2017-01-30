@@ -96,6 +96,39 @@ a:hover{text-decoration: none;}
 }
 /*custom order end*/
 
+/*confirm payment*/
+.confirm .main.container{
+	margin-top: 20px;
+}
+/*confirm payment end*/
+
+/*sitemap start*/
+.sitemap a{
+    font-size: 20px;
+}
+.sitemap a:hover{
+    color: #ffcf3e;
+}
+.sitemap li.level-1,
+.sitemap li.level-2,
+.sitemap li.level-3{
+	padding-left: 20px;
+}
+.sitemap li.level-0>a{
+    font-family: 'harmonia-black';
+}
+.sitemap li.level-1>a{
+    font-family: 'harmonia-bold';
+}
+.sitemap li.level-2>a{
+    font-family: 'harmonia-bold';
+}
+.sitemap li.level-3>a{
+    font-family: 'harmonia-light';
+}
+
+/*sitemap end*/
+
 /*responsive*/
 
 @media only screen and (max-width: 770px) {

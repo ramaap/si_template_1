@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-2">
+<body class="weare">
 <?php $this->load->view('front/slice/menu'); ?>
 
 	<div class="main container">
-		test
+		<h2>Who We Are</h2>
 	</div>
 
 

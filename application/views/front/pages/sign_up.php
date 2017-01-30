@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-2">
+<body class="sign-up">
 <?php $this->load->view('front/slice/menu'); ?>
 
  <script type="text/javascript">
