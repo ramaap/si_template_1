@@ -9,46 +9,37 @@
 		<div id="ourproduct">
 			<h2>Paket Mana yang Anda Butuhkan?</h2>
 			<div class="ourproduct-container">
-				<div class="col-sm-6 side left">
+				<div class="side left">
 					<div class="column images">
 						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/3.png">
 					</div>
 					<div class="column info-action">
-						<div>
-							<strong>Original Bussines Card</strong>
-							<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
-							<p>Harga Mulai IDR18000 / box</p>
-						</div>
-						<div>
-							<a href="<?php echo site_url("front/checkout/checkout_business_card/"); ?>">
+						<strong>Original Bussines Card</strong>
+						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+						<p>Harga Mulai IDR18000 / box</p>
+						<a href="<?php echo site_url("front/checkout/checkout_business_card/"); ?>">
+							<button>
 								<span>
 									<span>Order ></span>
 								</span>
-							</a>
-						<div class="clear"></div>
-						</div>
+							</button>
+						</a>
 					</div>
-					<div class="clear"></div>
 				</div>
-				<div class="col-sm-6 side right">
+				<div class="side right">
 					<div class="column images">
 						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/2.png">
 					</div>
 					<div class="column info-action">
-						<div>
-							<strong>Deluxe Bussines Card</strong>
-							<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
-							<p>Harga Mulai IDR18000 / box</p>
-						</div>
-						<div>
-							<a>
-								<span>
-									<span>Order ></span>
-								</span>
-							</a>
-						</div>
+						<strong>Deluxe Bussines Card</strong>
+						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+						<p>Harga Mulai IDR18000 / box</p>
+						<button>
+							<span>
+								<span>Order ></span>
+							</span>
+						</button>
 					</div>
-					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div> 
@@ -87,9 +78,9 @@
 	<script type="text/javascript">
 		var $toEqualize = $('.column');
 		$toEqualize.css('height', (function(){
-			return Math.max.apply(null, $toEqualize.map(function(){
-			return $(this).height();
-			}).get());
+		return Math.max.apply(null, $toEqualize.map(function(){
+		return $(this).height();
+		}).get());
 		})());
     </script>
 

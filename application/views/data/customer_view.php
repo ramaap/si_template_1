@@ -183,7 +183,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     adjustment: 7
                             });
                             };
-                    });</script>
+                    });
+						
+		function go_to_detail(index)	
+		{
+            $('.loading_gear_gif').show();
+                    $.ajax({
+                    type: "POST",
+                            url: "<?php echo site_url('data/customer/go_to_detail') ?>",
+                            timeout: 20000,
+                            data:
+                            'datamodel=' + $(index).attr("datamodel")
+
+                            , success: function(result) {
+                            
+								window.location = '<?php echo site_url("data/history") ?>';
+                            }
+
+                    });
+			
+		}
+		function go_to_alamat(index)	
+		{
+            $('.loading_gear_gif').show();
+                    $.ajax({
+                    type: "POST",
+                            url: "<?php echo site_url('data/customer/go_to_detail') ?>",
+                            timeout: 20000,
+                            data:
+                            'datamodel=' + $(index).attr("datamodel")
+
+                            , success: function(result) {
+                            
+								window.location = '<?php echo site_url("data/data_alamat") ?>';
+                            }
+
+                    });
+			
+		}
+					</script>
     </head>
     <body ng-app="main">
         <div class="container-fluid">
@@ -221,7 +259,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <span id="customer_telp_{{$index}}" >{{customer.customer_telp}}</span>
                                 </td> 
                                 <td class="col-md-4" data-title="'Alamat'" sortable="'customer_alamat'"> 
-                                    <span id="customer_alamat_{{$index}}" >{{customer.customer_alamat}}, {{customer.customer_provinsi}}, {{customer.customer_kota}}, {{customer.customer_kecamatan}} {{customer.customer_kode_pos}}</span>  
+                                    <span id="customer_alamat_{{$index}}" >{{customer.customer_alamat}}, {{customer.nama_prov}}, {{customer.kota}}, {{customer.customer_kecamatan}} {{customer.customer_kode_pos}}</span>  
                                 </td>
 
                                 <td class="action" data-title="'Actions'" ng-mouseover="show($index)" >
@@ -230,9 +268,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <fa  ng-if="customer.is_permanent == 0" class="fa-main btn-toolbar btn-toolbar-primary action_bar_{{$index}}" name="gear" size="2"></fa>
                                 <div id="toolbar-options-{{$index}}" class="hidden" >
 
-                                    <a title="Daftar Alamat" href="" id="customer-{{$index}}" datamodel={{customer.datamodel}} ng-if="customer.is_permanent == 0" >
+                                    <a title="Daftar Alamat" href="" id="customer-{{$index}}" onclick="go_to_alamat(this)" datamodel={{customer.datamodel}} ng-if="customer.is_permanent == 0" >
                                         <fa name="home" size="2"></fa></a>
-                                    <a title="History Order" href="" id="customer-{{$index}}" datamodel={{customer.datamodel}} ng-if="customer.is_permanent == 0">
+                                    <a title="History Order" href="" id="customer-{{$index}}" onclick="go_to_detail(this)" datamodel={{customer.datamodel}} ng-if="customer.is_permanent == 0">
                                         <fa name="history" size="2"></fa></a>
                                 </div>
                             </center>

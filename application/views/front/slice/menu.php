@@ -34,7 +34,7 @@
 								<a href="<?php echo site_url('front/login_customer/logout')?>">Log out</a>
 							</li>
 							<li>
-								<a href="<?php echo site_url('front/user_profile')?>">User Profile</a>
+								<a href="<?php echo site_url('front/user_profile')?>">Member Area</a>
 							</li>
 						</ul>
 					</div>
