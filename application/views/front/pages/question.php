@@ -39,7 +39,9 @@
 						</p>
 						<p style="font-style: italic;">
 							Ruko YAP Square No 7C
+							<br>
 							Jl. C Simanjuntak 
+							<br>
 							Yogyakarta, Indonesia 
 						</p>
 

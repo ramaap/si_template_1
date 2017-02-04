@@ -320,7 +320,7 @@ footer .footer-container .menu-footer .menu li a{
 	header .page-header-container div.menu-nav li{
     	line-height: 20px;
     	font-size: 18px;
-    	margin: 15px;
+    	margin: 10px;
 	}
 	header .page-header-container div.menu-action .login{
 		margin-top: 15px;
@@ -426,8 +426,6 @@ footer .footer-container .menu-footer .menu li a{
 	footer .footer-container .menu-footer .menu ul{
 		padding-left: 0px;
 	}
-}
-@media only screen and (max-width: 360px){
 	header .page-header-container div.menu-mobile-container li,
 	header .page-header-container div.menu-mobile-container .tab-menu,
 	header .page-header-container div.menu-mobile-container #menu-mobile{
@@ -443,6 +441,8 @@ footer .footer-container .menu-footer .menu li a{
 	header .page-header-container div.menu-mobile-container li{
 		width: 100%;
 	}
+}
+@media only screen and (max-width: 360px){
 }
 
 

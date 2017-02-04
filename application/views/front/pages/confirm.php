@@ -11,10 +11,9 @@
  ?>
 
 	<div class="main container">
-		<div class="cart-checkout">
+		<div>
 			<div>
-
-				<div class="shipping">
+				<div>
 					<h2>Konfirmasi Pembayaran</h2>
 					 <?php echo form_open('front/confirm/add', 'id="form_add"'); ?> 
 						<ul>
@@ -57,16 +56,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		var $toEqualize = $('.column');
-		$toEqualize.css('height', (function(){
-		return Math.max.apply(null, $toEqualize.map(function(){
-		return $(this).height();
-		}).get());
-		})());
-    </script>
-
         <?php $this->load->view('front/slice/footer'); ?>
 </body>
 </html>
