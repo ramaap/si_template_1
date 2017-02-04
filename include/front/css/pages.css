@@ -129,6 +129,86 @@ a:hover{text-decoration: none;}
 
 /*sitemap end*/
 
+/*Question/FAQ*/
+.question .main.container .title{
+    margin: 20px;
+}
+.question .main.container .title img{
+	width: 250px;
+}
+.question .left {
+    float: left;
+    width: 25%;
+}
+.question .left h2{    
+	text-align: right;
+    margin-right: 20px;
+}
+.question .right {
+    float: left;
+    width: 75%;
+    border-left: 2px solid #9e9e9e;
+    padding-left: 20px;
+}
+.question .bottom {
+    float: none;
+    position: relative;
+    clear: both;
+    width: 40%;
+    margin: 40px auto;
+}
+
+/*newsletter*/
+	.newsletter {
+	    position: relative;
+	    overflow: hidden;
+	    width: 80%;
+	    margin: 0 auto;
+	    background: #e6e6e6;
+    	padding: 30px 50px;
+	}
+	.news-left {
+	    float: left;
+	    width: 50%;
+	}
+	.news-left input[type="text"] {
+	    height: 35px;
+	    width: 80%;
+	    padding: 10px;
+    	margin-top: 20px;
+	}
+	.news-left.social {
+	    text-align: center;
+	}
+	.news-left.social .social{
+	    width: 65px;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	}
+	.news-left.social em{
+		background-image: url(../images/page/faq/social.png);
+		background-position: -7px -9px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-bottom: 10px;
+		position: relative;
+		left: 0px;
+		top: 0px;
+		background-size: 80px;
+		float: left;
+	}
+	.news-left.social em.facebook{
+		background-position: -42px -9px;
+	}
+
+/*newsletter end*/
+
+/*Question/FAQ end*/
+
+
 /*responsive*/
 
 @media only screen and (max-width: 770px) {
@@ -152,5 +232,32 @@ a:hover{text-decoration: none;}
 	}
 	.dashboard .main-content .check-shipping input{
 		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.question .bottom{
+		width: 100%;
+	}
+	.question .left,
+	.question .right{
+	    float: none;
+	    width: 100%;
+	}
+	.question .left h2{
+	    text-align: left;
+	    font-family: 'harmonia-bold';
+	}
+	.newsletter{
+	    width: 100%;
+	    padding: 10px;
+	}
+	.news-left{
+	    float: none;
+	    width: 100%;
+	}
+	.news-left.social {
+	    text-align: center;
+	    margin-top: 20px;
 	}
 }
