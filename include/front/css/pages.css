@@ -100,6 +100,47 @@ a:hover{text-decoration: none;}
 .confirm .main.container{
 	margin-top: 20px;
 }
+.confirm .main.container li{
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.confirm .main.container label{
+    min-width: 200px;
+}
+.confirm .main.container input{
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+}
+.confirm .main.container textarea{
+    resize: none;
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+}
+.confirm .main.container select{
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+    height: 40px;
+}
+
+.confirm .main.container input#button{
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+    width: 200px;
+    margin-left: 200px;
+    background-color: #ffd03e;
+    color: #404041;
+}
 /*confirm payment end*/
 
 /*sitemap start*/
@@ -129,6 +170,208 @@ a:hover{text-decoration: none;}
 
 /*sitemap end*/
 
+/*Question/FAQ*/
+.question .main.container .title{
+    margin: 20px;
+}
+.question .main.container .title img{
+	width: 250px;
+}
+.question .left {
+    float: left;
+    width: 25%;
+}
+.question .left h2{    
+	text-align: right;
+    margin-right: 20px;
+}
+.question .right {
+    float: left;
+    width: 75%;
+    border-left: 2px solid #9e9e9e;
+    padding-left: 20px;
+}
+.question .bottom {
+    float: none;
+    position: relative;
+    clear: both;
+    width: 40%;
+    margin: 40px auto;
+}
+/*Question/FAQ end*/
+
+/*whatwe*/
+.whatwe .quote{
+	width: 50%;
+	margin: 40px auto;
+}
+.whatwe .content{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+.whatwe .address {
+    margin-top: 30px;
+}
+.whatwe .address img{
+	width: 100%;
+	margin-top: 30px;
+}
+.whatwe .what-we-make {
+    margin-top: 40px;
+}
+.whatwe .what-we-make img{
+	width: 250px;
+    margin-bottom: 30px;
+}
+
+
+.whatwe .quote h2{
+	text-transform: none;
+	font-size: 30px;
+}
+.whatwe .below .container{
+	max-width: 1000px;
+    margin-top: 30px;
+}
+.whatwe .below .container h2{
+    font-family: 'harmonia-bold';
+    color: #9E9E9E;
+    font-size: 20px;
+}
+.whatwe .below .container span{
+    font-family: 'harmonia-light';
+    color: #9E9E9E;
+}
+.whatwe .below .container .title{
+	width: 150px;
+}
+.whatwe .below .container .title img{
+	width: 100%;
+}
+.whatwe .bx-wrapper .bx-viewport{
+	border: 0px;
+    box-shadow: none;
+}
+.whatwe .bx-controls-direction .bx-prev, .bx-controls-direction .bx-next{
+    background-size: 24px;
+    background-position: 0px 0px;
+}
+.whatwe .bx-controls-direction .bx-prev{
+	background-image: url('../images/index/prev.png');
+    left: -50px;
+}
+.whatwe .bx-controls-direction .bx-next{
+	background-image: url('../images/index/next.png');
+    right: -50px;
+}
+.whatwe .bx-controls-direction .bx-prev:hover,
+.whatwe .bx-controls-direction  .bx-next:hover{
+    background-position: 0px 0px;
+}
+
+/*whatwe end*/
+
+
+
+/*newsletter*/
+	.newsletter {
+	    position: relative;
+	    overflow: hidden;
+	    width: 80%;
+	    margin: 0 auto;
+	    background: #e6e6e6;
+    	padding: 30px 50px;
+	}
+	.news-left {
+	    float: left;
+	    width: 50%;
+	}
+	.news-left input[type="text"] {
+	    height: 35px;
+	    width: 80%;
+	    padding: 10px;
+    	margin-top: 20px;
+	}
+	.news-left.social {
+	    text-align: center;
+	}
+	.news-left.social .social{
+	    width: 65px;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	}
+	.news-left.social em{
+		background-image: url(../images/page/faq/social.png);
+		background-position: -7px -9px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-bottom: 10px;
+		position: relative;
+		left: 0px;
+		top: 0px;
+		background-size: 80px;
+		float: left;
+	}
+	.news-left.social em.facebook{
+		background-position: -42px -9px;
+	}
+
+/*newsletter end*/
+
+/*contact*/
+.contact .title{
+	width: 150px;
+    margin: 40px 0px;
+}
+.contact .title img{
+	width: 100%;
+}
+.contact .content.form {
+    margin: 40px 0px;
+}
+.contact .main.container label{
+	width: 150px;
+	float: left;
+	line-height: 40px;
+}
+.contact .main.container li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.contact .main.container input,
+.contact .main.container textarea,
+.contact .main.container select{
+    min-width: 250px;
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    box-shadow: none;
+}
+.contact .main.container textarea{
+	min-height: 200px;
+}
+.contact .main.container input#button{
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+    width: 200px;
+    margin-left: 150px;
+    background-color: #ffd03e;
+    color: #404041;
+}
+/*contact end*/
+
+
 /*responsive*/
 
 @media only screen and (max-width: 770px) {
@@ -152,5 +395,51 @@ a:hover{text-decoration: none;}
 	}
 	.dashboard .main-content .check-shipping input{
 		margin-bottom: 20px;
+	}
+	.bx-controls-direction .bx-prev{
+		left: -25px;
+	}
+	.bx-controls-direction .bx-next{
+		right: -25px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.question .bottom{
+		width: 100%;
+	}
+	.question .left,
+	.question .right{
+	    float: none;
+	    width: 100%;
+	}
+	.question .left h2{
+	    text-align: left;
+	    font-family: 'harmonia-bold';
+	}
+	.newsletter{
+	    width: 100%;
+	    padding: 10px;
+	}
+	.news-left{
+	    float: none;
+	    width: 100%;
+	}
+	.news-left.social {
+	    text-align: center;
+	    margin-top: 20px;
+	}
+	.contact .main.container input#button,
+	.confirm .main.container input#button{
+	    width: 100%;
+	    margin: 0px;
+	}
+	.contact .main.container input, 
+	.contact .main.container textarea, 
+	.contact .main.container select,
+	.confirm .main.container input, 
+	.confirm .main.container textarea, 
+	.confirm .main.container select{
+		width: 100%;
 	}
 }

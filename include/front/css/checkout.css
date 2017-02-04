@@ -193,9 +193,11 @@ a:focus, a:hover{
 
 /*login start*/
 .cart-checkout .login .left{
-    float: left;
+    /*float: left;*/
     width: 49%;
     padding: 20px;
+    float: none;
+    margin: 0 auto;
 }
 .cart-checkout .login .left h2{
     margin-top: 0px;
@@ -237,15 +239,17 @@ a:focus, a:hover{
     background: #385379;
 }
 .cart-checkout .login .separator{
-    height: 353px;
+/*    height: 353px;
     float: left;
-    border: 1px solid grey;
+    border: 1px solid grey;*/
+    display: none;
 }
 .cart-checkout .login .right{
-    float: left;
+    display: none;
+    /*float: left;
     width: 50%;
     padding: 40px;
-    padding-top: 140px;
+    padding-top: 140px;*/
 }
 .cart-checkout .login .right .button-quick div{
     width: 220px;
@@ -524,6 +528,9 @@ body.checkout-4 .etc .button-back span{
         width: 250px;
     }
 
+    .cart-checkout .login .left{
+        width: 100%;
+    }
     /*checkout 2*/
     .cart-checkout .cart-container {
         max-width: 100%;
@@ -559,5 +566,15 @@ body.checkout-4 .etc .button-back span{
         width: 100% !important;
         height: auto !important;
     }
-
+    .cart-checkout .login .left .button-login button,
+    .cart-checkout .login .left .button-signup a,
+    .cart-checkout .login .left .button-login,
+    .cart-checkout .login .left .button-signup {
+        width: 100%;
+        min-width: 100px;
+    }
+    .cart-checkout .login .left .button-login,
+    .cart-checkout .login .left .button-signup{
+        margin: 10px 0px;
+    }
 }
