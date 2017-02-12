@@ -67,9 +67,6 @@ class checkout_pembayaran extends CI_Controller {
         $no_order = 'PX-' . $tgl . $nourut;
         return $no_order;
     }
-	public function adds() {
-		echo "sukses";
-	}
 	public function add() {
         $this->lib->check_session_customer();
 		

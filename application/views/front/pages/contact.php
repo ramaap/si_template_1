@@ -19,49 +19,32 @@
 		</p>
 		
 		<div class="content form">
+			<?php echo form_open('front/contact/Post', 'id="form_add"'); ?> 
 			<ul>
 				<li>
 					<label>Subject</label>
-					<input type="text">
+					<input type="text" id="subject" name="subject" required>
 				</li>
 				<li>
 					<label>Nama Lengkap</label>
-					<input type="text">
+					<input type="text" id="nama" name="nama" required>
 				</li>
 				<li>
 					<label>Alamat Email</label>
-					<input type="text">
+					<input type="email" id="email" name="email" required>
 				</li>
 				<li>
 					<label>Nomor Telepon</label>
-					<input type="text">
+					<input type="text" id="telp" name="telp" required>
 				</li>
 				<li>
 					<label>Pesan</label>
-					<textarea rows="4" cols="50" style="vertical-align: top;"></textarea>
+					<textarea rows="4" cols="50" id="pesan" name="pesan" required style="vertical-align: top;"></textarea>
 				</li>
 			</ul>
 			<input type="submit" id="button" name="kirim" value="Kirim"  class="btn btn-success" />
+			<?php echo form_close(); ?>  
 		</div>
-		
-		<div class="newsletter">
-			<div class="news-left">
-				<span>Dapatkan penawaran menarik dengan langganan Newsletter kami</span>
-				<br>
-				<input type="text" name="email" placeholder="Masukkan alamat email kamu disini">
-			</div>
-			<div class="news-left social">
-				<span>Jangan lupa Follow kami juga</span>
-				<div class="social">
-					<a href="#"><em class="instagram"></em></a>
-					<a href="#"><em class="facebook"></em></a>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
         <?php $this->load->view('front/slice/footer'); ?>
 </body>
 </html>

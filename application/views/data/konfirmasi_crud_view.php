@@ -11,6 +11,7 @@
                 <select name="status" class="form-control" id="status" required>
 					<option <?php echo set_select('status', 'Open'); ?> value="Open">Open</option>
 					<option <?php echo set_select('status', 'Verified'); ?> value="Verified">Verified</option>
+					<option <?php echo set_select('status', 'Failed'); ?> value="Failed">Failed</option>
 				</select> 
             </div> 
         </div>

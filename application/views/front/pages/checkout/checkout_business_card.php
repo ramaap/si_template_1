@@ -187,6 +187,20 @@
 		$('#total_db').val(harga);
 	}
 	
+	function check_form(){
+		 lnv.confirm({
+			title: 'Konfirmasi',
+			content: 'Apakah Anda Yakin dengan Desain yang Anda Upload? <br/> Kami tidak bertanggung jawab terhadap pelanggaran hak cipta dari konten desain yang Anda upload',
+			confirmBtnText: 'Confirm',
+			confirmHandler: function(){
+				$('#button').trigger('click');
+			},
+			cancelBtnText: 'Cancel',
+			cancelHandler: function(){
+
+			}
+		});
+	}
 	</script>
 
 
@@ -304,7 +318,7 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div class="button">
+				<div class="button" hidden>
 					<button type="submit" id="button" name="simpan" value="Simpan">
 						<span>
 							<span>
@@ -314,6 +328,15 @@
 					</button>
 				</div>
 			 <?php echo form_close(); ?>  
+				<div class="button">
+					<button type="submit" id="button_check" name="button_check" onclick="check_form()">
+						<span>
+							<span>
+								Lanjutkan >
+							</span>
+						</span>
+					</button>
+				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
