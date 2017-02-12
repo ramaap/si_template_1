@@ -187,21 +187,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="newsletter">
-					<div class="news-left">
-						<span>Dapatkan penawaran menarik dengan langganan Newsletter kami</span>
-						<br>
-						<input type="text" name="email" placeholder="Masukkan alamat email kamu disini">
-					</div>
-					<div class="news-left social">
-						<span>Jangan lupa Follow kami juga</span>
-						<div class="social">
-							<a href="#"><em class="instagram"></em></a>
-							<a href="#"><em class="facebook"></em></a>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
+				<?php $this->load->view('front/slice/newsletter'); ?>
 			</div>
 		</div>
 		

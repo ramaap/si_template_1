@@ -49,9 +49,9 @@
 				<h3>Terima kasih sudah memesan</h3>
 				<h3>Pesanan anda dengan kode <strong><?php echo $order->order_no; ?></strong> segera kami proses</h3>
 				<div class="attention">
-					<p>*Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam</p>
-					<p>*Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam</p>
-					<p>*Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam</p>
+					<p>Mohon segera lakukan konfirmasi pembayaran Anda secepat mungkin.</p>
+					<p>Kami membutuhkan waktu sekitar 1-2 jam untuk proses verifikasi pesanan.</p>
+					<p>Pesanan yang diverifikasi setelah pukul 12 siang, akan kami proses di hari berikutnya.</p>
 				</div>
 			</div>
 			<div class="pembayaran">
@@ -68,9 +68,9 @@
 							<div class="bca">
 								<img src="<?php echo base_url(); ?>include/front/images/checkout/bca.png">
 								<strong>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
+									<p>Bank Central Asia</p>
+									<p>037 233 5333</p>
+									<p>Ronny Kurniawan</p>
 								</strong>
 							</div>
 						</div>
@@ -81,9 +81,9 @@
 			</div>
 
 			<div class="confirm-alert">
-				<p>Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam</p>
-				<p>Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum </p>
-				<p>Lorem ipsum dolor sit amet, mei sint concludaturque ea.</p>
+				<p>konfirmasi pesanan harus dilakukan pada hari yang sama.</p>
+				<p>Pesanan tanpa konfirmasi pembayaran maksimal 7 hari.</p>
+				<p>akan dianggap batal secara otomatis.</p>
 			</div>
 			<div class="etc">
 				<h3>Sudah Melakukan Pembayaran?</h3>

@@ -66,46 +66,6 @@
 								</li>
 							</ul>
 						</div>
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-
-				<div class="login">
-					<div class="container">
-						<div class="left">
-							<h2>Login</h2>
-						</div>
-						<div class="right">
-							Hello <?php echo $this->session->userdata('user_name')?>!
-						</div>
-
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-
-				<div class="shipping">
-					<div class="container">
-						<h2>Informasi Pengiriman</h2>
-						<p><?php echo $pengiriman->customer_alamat; ?>, <br/><?php echo $pengiriman->customer_telp; ?> </p>
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="billing">
-					<div class="container">
-						<h2>Informasi Penagihan</h2>
-						<p><?php echo $penagihan->customer_alamat; ?>, <br/><?php echo $penagihan->customer_telp; ?> </p>
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -113,28 +73,30 @@
 					<div class="left">
 						<h2>Pembayaran</h2>
 						<p>
-							Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam qualisque cotidieque, ne dolores intellegebat ius. Dicit nonumes vim cu, ad vix imperdiet assentior.
+							Mohon maaf untuk saat ini Kami hanya dapat melayani melayani pembayaran melalui transfer Bank.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam qualisque cotidieque, ne dolores intellegebat ius. Dicit nonumes vim cu, ad vix imperdiet assentior.
+							Mohon pembayaran jumlah sesuai yang tertera pada informasi Total pembayaran.<br/>
+							Pembayaran dan konfirmasi transfer haru dilakukan dalam waktu 2 jam<br/>
+							atau pesanan akan otomatis dibatalkan.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, mei sint concludaturque ea. 
+							Transfer dapat dilakukan melalui 
 						</p>
 						<div class="bank">
 							<div class="bca">
 								<img src="<?php echo base_url(); ?>include/front/images/checkout/bca.png">
 								<strong>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
+									<p>Bank Central Asia</p>
+									<p>037 233 5333</p>
+									<p>Ronny Kurniawan</p>
 								</strong>
 							</div>
 						</div>
 						<div class="shipping-billing">
 							<div class="left">
 								<div class="title">
-									<h3>Informasi Pengiriman</h3><a href="">(edit)</a>
+									<h3>Informasi Pengiriman</h3><a href="<?php echo site_url("front/checkout/checkout_pembayaran_edit/"); ?>">(edit)</a>
 									<div class="clear"></div>
 								</div>
 								<div>
@@ -149,7 +111,7 @@
 							</div>
 							<div class="right">
 								<div class="title">
-									<h3>Informasi Penagihan</h3><a href="">(edit)</a>
+									<h3>Informasi Penagihan</h3><a href="<?php echo site_url("front/checkout/checkout_pembayaran_edit2/"); ?>">(edit)</a>
 									<div class="clear"></div>
 								</div>
 								<div>
@@ -213,7 +175,7 @@
 				</div>
 					</div>
 					<p>
-						Lorem ipsum dolor sit amet, mei sint concludaturque ea. 
+						Mohon periksa kembali semua informasi sebelum melanjutkan pesanan Anda. 
 					</p>
 					<a href="<?php echo site_url("front/checkout/checkout_success/"); ?>">
 						<div class="lanjutkan">
