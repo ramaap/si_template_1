@@ -5,7 +5,7 @@
 <?php $this->load->view('front/slice/menu'); ?>
 
 	<div class="main container">
-	<?php $this->load->view('front/slice/carousel'); ?>
+	<?php $this->load->view('front/slice/carousel_kn'); ?>
 		<div id="ourproduct">
 			<h2>Paket Mana yang Anda Butuhkan?</h2>
 			<div class="ourproduct-container">

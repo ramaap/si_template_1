@@ -24,6 +24,19 @@ body.catalog  .ourproduct-container{
     margin-top: 25px;
     margin-bottom: 20px;
 }
+body.catalog.pixa-design .ourproduct-container{
+    background: #385379;
+    margin-bottom: 0px;
+}
+body.catalog.pixa-design .col-md-6{
+    margin: 20px 0px;
+}
+body.catalog.pixa-design .main.container #ourproduct h2{
+    width: 239px;
+}
+body.catalog.pixa-design .ourproduct-container .image-container{
+    margin: 0 auto;
+}
 body.catalog .ourproduct-container .row{
 	padding: 40px;
 }

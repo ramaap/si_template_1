@@ -10,14 +10,23 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="<?php echo base_url(); ?>include/front/images/index/main-banner1.png" alt="Chania">
+					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner1.png" alt="Chania">
 				</div>
 				<div class="item">
-					<img src="<?php echo base_url(); ?>include/front/images/index/main-banner2.png" alt="Chania">
+					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner2.png" alt="Chania">
 				</div>
 				<div class="item">
-					<img src="<?php echo base_url(); ?>include/front/images/index/main-banner3.png" alt="Chania">
+					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner3.png" alt="Chania">
 				</div>
+				<div class="item">
+					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner4.png" alt="Chania">
+				</div>
+				<div class="item">
+					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner5.png" alt="Chania">
+				</div>
+				<div class="item">
+					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner6.png" alt="Chania">
+				</div>\
 			</div>
 			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

@@ -54,7 +54,15 @@ span{
     font-family: 'harmonia-light';
     color: black;
 }
-
+.carousel-indicators{
+	display: none;
+}
+.carousel.slide{
+	margin-bottom: 20px;
+}
+.bx-wrapper .bx-controls-direction a.disabled{
+	display: block;
+}
 /*Header	*/
 header .page-header-container{
 	position: relative;
