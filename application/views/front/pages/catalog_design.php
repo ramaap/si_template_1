@@ -12,35 +12,35 @@
 				<div class="row">
 				  <div class="col-md-6">
 					<div class="image-container">
-						<a href="<?php echo site_url("front/checkout/product_detail_business_card/"); ?>">
+						<a href="<?php echo site_url("front/design/catalog_design_fitbox/"); ?>">
 							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/fitbox.png">
 						</a>
 					</div>
 				  </div>
 				  <div class="col-md-6">
 					<div class="image-container">
-						<a href="<?php echo site_url("front/checkout/product_detail_flyer/"); ?>">
+						<a href="<?php echo site_url("front/design/catalog_design_wijaya/"); ?>">
 							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/wijaya.png">
 						</a>
 					</div>
 				  </div>
 				  <div class="col-md-6">
 					<div class="image-container">
-						<a href="<?php echo site_url("front/checkout/product_detail_flyer/"); ?>">
+						<a href="<?php echo site_url("front/design/catalog_design_mindo/"); ?>">
 							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/mindo.png">
 						</a>
 					</div>
 				  </div>
 				  <div class="col-md-6">
 					<div class="image-container">
-						<a href="<?php echo site_url("front/checkout/product_detail_flyer/"); ?>">
+						<a href="<?php echo site_url("front/design/catalog_design_grace/"); ?>">
 							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/grace.png">
 						</a>
 					</div>
 				  </div>
 				  <div class="col-md-6">
 					<div class="image-container">
-						<a href="<?php echo site_url("front/checkout/product_detail_flyer/"); ?>">
+						<a href="<?php echo site_url("front/design/catalog_design_kurnia/"); ?>">
 							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/kurnia.png">
 						</a>
 					</div>

@@ -26,7 +26,7 @@
 				</div>
 				<div class="item">
 					<img src="<?php echo base_url(); ?>include/front/images/product/kn/main-banner6.png" alt="Chania">
-				</div>\
+				</div>
 			</div>
 			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

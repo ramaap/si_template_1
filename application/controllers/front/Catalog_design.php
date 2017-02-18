@@ -14,7 +14,7 @@ class catalog_design extends CI_Controller {
 
 	public function index() {
         // $this->lib->check_session_customer();
-        $this->lib->check_lokasi("Order");     
+        $this->lib->check_lokasi("Design");     
         $this->load->view('front/pages/catalog_design');
     }
 }

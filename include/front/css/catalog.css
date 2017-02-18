@@ -28,15 +28,6 @@ body.catalog.pixa-design .ourproduct-container{
     background: #385379;
     margin-bottom: 0px;
 }
-body.catalog.pixa-design .col-md-6{
-    margin: 20px 0px;
-}
-body.catalog.pixa-design .main.container #ourproduct h2{
-    width: 239px;
-}
-body.catalog.pixa-design .ourproduct-container .image-container{
-    margin: 0 auto;
-}
 body.catalog .ourproduct-container .row{
 	padding: 40px;
 }
@@ -51,18 +42,75 @@ body.catalog .ourproduct-container .row .image-container p{
 }
 
 
-/*product detail*/
+/*pixa design*/
+body.catalog.pixa-design .col-md-6{
+    margin: 20px 0px;
+}
+body.catalog.pixa-design .main.container #ourproduct h2{
+    width: 239px;
+}
+body.catalog.pixa-design .ourproduct-container .image-container{
+    margin: 0 auto;
+}
 
+/*pixa design inside*/
+body.catalog.pixa-design-inside .center{
+    width: 25%;
+    margin: 50px auto;
+}
+body.catalog.pixa-design-inside img{
+    width: 100%;
+}
+body.catalog.pixa-design-inside .center img{
+    margin: 30% 0px;
+}
+body.catalog.pixa-design-inside .side{
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+body.catalog.pixa-design-inside .side img#left{
+    float: left;
+    width: 45%;
+}
+body.catalog.pixa-design-inside .side img#right{
+    float: right;
+    width: 45%;
+}
+
+
+/*product detail*/
 body.product-detail .main.container #ourproduct h2{
     width: 666px;
 }
 body.product-detail .main.container .ourproduct-container{
     margin-top: 40px;
 }
+body.product-detail .main.container .banner{
+    position: relative;
+}
+body.product-detail .main.container .banner h2{
+    position: absolute;
+    z-index: 999;
+    margin-top: 0px;
+    left: 50%;
+    top: 12px;
+}
+body.product-detail .main.container .banner h2 span{
+    position: relative;
+    left: -50%;
+    background: #eee;
+    padding: 10px;
+    text-transform: uppercase;
+}
 body.product-detail .main.container .side{
-    overflow: hidden;
-    width: 50%;
     float: left;
+}
+body.product-detail.business-card .main.container .side,
+body.product-detail.poster .main.container .side,
+body.product-detail.kop .main.container .side{
+    width: 50%;
 }
 body.product-detail .main.container .side .images{
     width: 52%;
@@ -75,19 +123,22 @@ body.product-detail .main.container .side .info-action{
     position: relative;
     padding-top: 30px;
 }
-body.product-detail .main.container .side .info-action a{
+body.product-detail .main.container .side .info-action a,
+body.product-detail .main.container .col-md-4 .info-action a{
     position: absolute;
     bottom: 0;
     background: #ffcf3e;
     padding: 10px 40px 10px 10px;
     border: none;
 }
-body.product-detail .main.container .side .info-action a button{
+body.product-detail .main.container .side .info-action a button,
+body.product-detail .main.container .col-md-4 .info-action a button{
     padding: 0px;
     background: transparent;
     border: none;
 }
-body.product-detail .main.container .side .info-action button span{
+body.product-detail .main.container .side .info-action button span,
+body.product-detail .main.container .col-md-4 .info-action button span{
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -122,9 +173,107 @@ body.product-detail .main.container .different table .colored{
     color: grey;
 }
 
+/*product detail - flyer*/
+body.product-detail.flyer .main.container #ourproduct h2 {
+    width: 610px;
+}
+body.product-detail .main.container .col-md-4 {
+    height: 600px;
+}
+body.product-detail .main.container .col-md-4,
+body.product-detail.poster .main.container .side,
+body.product-detail.kop .main.container .side{
+    text-align: right;
+}
+body.product-detail .main.container .col-md-4 .info-action,
+body.product-detail.poster .main.container .side .info-action,
+body.product-detail.kop .main.container .side .info-action{
+    margin-top: 20px;
+}
+body.product-detail .main.container .col-md-4 .info-action a{
+    right: 10px;
+}
+
+/*product detail - brochure*/
+body.product-detail.brochure .main.container #ourproduct h2 {
+    width: 80%;
+    text-align: center;
+}
+body.product-detail.brochure .main.container .col-md-4 {
+    height: 645px;
+}
+
+/*product detail - poster / kop*/
+body.product-detail.poster .main.container #ourproduct h2 {
+    width: 780px;
+}
+body.product-detail.kop .main.container #ourproduct h2 {
+    width: 704px;
+}
+body.product-detail.poster .main.container .side .info-action,
+body.product-detail.kop .main.container .side .info-action{
+    margin-right: 20px;
+    height: 320px;
+}
+body.product-detail.poster .main.container .side .images,
+body.product-detail.poster .main.container .side .info-action,
+body.product-detail.kop .main.container .side .images,
+body.product-detail.kop .main.container .side .info-action{
+    width: 60%;
+}
+body.product-detail.poster .main.container .side.right .images,
+body.product-detail.poster .main.container .side.right .info-action,
+body.product-detail.kop .main.container .side.right .images,
+body.product-detail.kop .main.container .side.right .info-action{
+    float: left;
+}
+body.product-detail.poster .main.container .side.left .images,
+body.product-detail.poster .main.container .side.left .info-action,
+body.product-detail.kop .main.container .side.left .images,
+body.product-detail.kop .main.container .side.left .info-action{
+    float: right;
+}
+body.product-detail.poster .main.container .side .info-action a,
+body.product-detail.kop .main.container .side .info-action a{
+    right: 0px;
+}
+
+/*product detail - amplop*/
+body.product-detail.amplop .main.container #ourproduct h2 {
+    width: 900px;
+}
+body.product-detail.amplop .main.container .side {
+    float: none;
+    overflow: auto;
+    width: 30%;
+    margin: 0 auto;
+}
+body.product-detail.amplop .main.container .side .images,
+body.product-detail.amplop .main.container .side .info-action{
+    width: 100%;
+    float: none;
+}
+body.product-detail.amplop .main.container .side .info-action{
+    height: 200px;
+    text-align: right;
+}
+body.product-detail.amplop .main.container .side .info-action a{
+    right: 0px;
+}
+
+
 /*responsive start*/
 
 @media only screen and (max-width: 1024px) {
+    body.product-detail.flyer .main.container #ourproduct h2,
+    body.product-detail.brochure .main.container #ourproduct h2,
+    body.product-detail.kop .main.container #ourproduct h2,
+    body.product-detail.amplop .main.container #ourproduct h2,
+    body.product-detail.poster .main.container #ourproduct h2,
+    body.product-detail.business-card .main.container #ourproduct h2{
+        width: 100%;
+        text-align: center;
+    }
     body.product-detail .main.container #ourproduct .different h2{
         left: 33%;
     }
@@ -135,18 +284,31 @@ body.product-detail .main.container .different table .colored{
     body.product-detail .main.container .side{
         margin-bottom: 20px;
         width: 100%;
-        float: none;
+    }
+    body.product-detail .main.container .side .info-action{
+        padding-top: 0px; 
+    }
+    body.product-detail .main.container .side .info-action p{
+        font-size: 13px; 
     }
 
+    
 }
 @media only screen and (max-width: 770px) {
+    body.catalog.pixa-design-inside .center {
+        width: 50%;
+    }
+    body.catalog.pixa-design-inside .side {
+        width: 80%;
+    }
 }
 @media only screen and (max-width: 480px){
     body.product-detail .main.container #ourproduct h2 {
         width: 440px;
     }
-    body.product-detail .main.container .side {
+    body.product-detail.business-card .main.container .side {
         margin-bottom: 20px;
+        width: 100%;
     }
     body.product-detail .main.container #ourproduct .different h2{
         left: 13%;
