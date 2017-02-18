@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_catalog'); ?>
-<body class="product-detail">
+<body class="product-detail business-card">
 <?php $this->load->view('front/slice/menu'); ?>
 
 	<div class="main container">
-	<?php $this->load->view('front/slice/carousel'); ?>
+		<div class="banner">
+			<h2>
+				<span>Kartu Nama</span>
+			</h2>
+			<?php $this->load->view('front/slice/carousel_kn'); ?>
+		</div>
 		<div id="ourproduct">
 			<h2>Paket Mana yang Anda Butuhkan?</h2>
 			<div class="ourproduct-container">
 				<div class="side left">
 					<div class="column images">
 						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/3.png">
+						<div class="clear"></div>
 					</div>
 					<div class="column info-action">
 						<strong>Original Bussines Card</strong>
@@ -25,10 +31,12 @@
 							</button>
 						</a>
 					</div>
+					<div class="clear"></div>
 				</div>
 				<div class="side right">
 					<div class="column images">
 						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/2.png">
+						<div class="clear"></div>
 					</div>
 					<div class="column info-action">
 						<strong>Deluxe Bussines Card</strong>
@@ -42,6 +50,7 @@
 							</button>
 						</a>
 					</div>
+					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
 			</div> 

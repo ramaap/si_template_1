@@ -1040,12 +1040,12 @@
 		</div>
 		<div class="detail-product">
 			<div class="image">
-				<img src="<?php echo base_url(); ?>include/front/images/checkout/kartu-nama.jpg">
+				<img src="<?php echo base_url(); ?>include/front/images/product/flyer/flyer-checkout.png">
 			</div>
 			<div class="detail">
 			<?php echo form_open_multipart('front/checkout/checkout_flyer/add', 'id="form_checkout"'); ?>	
 				<h3>Original Flyer</h3>
-				<p>Lorem ipsum dolor sit amet, sed no melius intellegebat, viris admodum ancillae sea ea. Dicam dicunt sea ne, no vivendum appellantur eam. Ocurreret complectitur necessitatibus qui in. Facilis detraxit patrioque duo te. Vis vocibus sensibus voluptatum ut, cu meis illud graeco has. Appellantur suscipiantur eos in, qui an phaedrum consequuntur.</p>
+				<p>Sebarkan kepada setiap orang informasi bisnis yang anda miliki. Murah, praktis, sangat ideal untuk dibagikan kepada semua orang.</p>
 				<div class="selects">
 					<div class="items">
 						<label>Ukuran</label>
