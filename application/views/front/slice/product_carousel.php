@@ -7,32 +7,40 @@
 				</div>
 				<ul class="bxslider">
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/2.png" />
-						<h2>Kartu Nama</h2>
-						<span>
-							<p>Mulai dari IDR 16.000/box</p>
-						</span>
+						<a href="<?php echo site_url("front/checkout/product_detail_business_card/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/2.png" />
+							<h2>Kartu Nama</h2>
+							<span>
+								<p>Mulai dari IDR 16.000/box</p>
+							</span>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/1.png" />
-						<h2>Flyer</h2>
-						<span>
-							<p>Mulai dari IDR 325/box</p>
-						</span>
+						<a href="<?php echo site_url("front/checkout/product_detail_flyer/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/1.png" />
+							<h2>Flyer</h2>
+							<span>
+								<p>Mulai dari IDR 325/box</p>
+							</span>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/4.png" />
-						<h2>Brochure</h2>
-						<span>
-							<p>Mulai dari IDR 2500/box</p>
-						</span>
+						<a href="<?php echo site_url("front/checkout/product_detail_brochure/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/4.png" />
+							<h2>Brochure</h2>
+							<span>
+								<p>Mulai dari IDR 2500/box</p>
+							</span>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/3.png" />
-						<h2>Kop Surat</h2>
-						<span>
-							<p>Mulai dari IDR 650/box</p>
-						</span>
+						<a href="<?php echo site_url("front/checkout/product_detail_kop/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/3.png" />
+							<h2>Kop Surat</h2>
+							<span>
+								<p>Mulai dari IDR 650/box</p>
+							</span>	
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -42,20 +50,28 @@
 				</div>
 				<ul class="bxslider">
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/1.png" />
-						<h2>Branding</h2>
+						<a href="<?php echo site_url("front/design/catalog_design_fitbox/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/1.png" />
+							<h2>Branding</h2>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/2.png" />
-						<h2>Rebranding</h2>
+						<a href="<?php echo site_url("front/design/catalog_design_kurnia/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/2.png" />
+							<h2>Rebranding</h2>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/3.png" />
-						<h2>Corporate Identity</h2>
+						<a href="<?php echo site_url("front/design/catalog_design_mindo/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/3.png" />
+							<h2>Corporate Identity</h2>
+						</a>
 					</li>
 					<li>
-						<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/4.png" />
-						<h2>Deluxe Bussiness Card</h2>
+						<a href="<?php echo site_url("front/design/catalog_design_wijaya/"); ?>">
+							<img src="<?php echo base_url(); ?>include/front/images/index/pixadesign/4.png" />
+							<h2>Deluxe Bussiness Card</h2>
+						</a>
 					</li>
 				</ul>
 			</div>
