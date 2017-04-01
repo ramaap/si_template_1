@@ -55,10 +55,18 @@ span{
     color: black;
 }
 .carousel-indicators{
-	display: none;
+	bottom: 8px;
+}
+.carousel-indicators li{
+	margin:0 10px;
+	background-color: #fff;
+}
+.carousel-indicators li.active{
+	margin:0 10px;    
+	background-color: #000;
 }
 .carousel.slide{
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 }
 .bx-wrapper .bx-controls-direction a.disabled{
 	display: block;
