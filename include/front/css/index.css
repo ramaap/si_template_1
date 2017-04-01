@@ -31,7 +31,8 @@ body{
 	width: 100%;
 }
 .middle #question {
-	margin-top: 90px;
+	margin-top: 120px;
+    margin-bottom: 70px;
 }
 .middle #question h3{
     width: 340px;
