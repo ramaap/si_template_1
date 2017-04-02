@@ -247,7 +247,7 @@
 			<div class="detail">
 			<?php echo form_open_multipart('front/checkout/checkout_business_card/add', 'id="form_checkout"'); ?>	
 				<h3>Original Business Card</h3>
-				<p>Lorem ipsum dolor sit amet, sed no melius intellegebat, viris admodum ancillae sea ea. Dicam dicunt sea ne, no vivendum appellantur eam. Ocurreret complectitur necessitatibus qui in. Facilis detraxit patrioque duo te. Vis vocibus sensibus voluptatum ut, cu meis illud graeco has. Appellantur suscipiantur eos in, qui an phaedrum consequuntur.</p>
+				<p>Menggunakan kertas standar, pilihan, harga, dan kualitas terjangkau.</p>
 				<div class="selects">
 					<div class="items">
 						<label>Ukuran</label>
@@ -305,20 +305,7 @@
 						<input hidden readonly id="total_db" name="total_db" type="number" />           
 					</div>
 				</div>
-				<div class="upload">
-					<div class="front-design">
-						<label>Front Design</label>
-				        <input type="file" name="front" required />
-						<div class="clear"></div>
-					</div>
-					<div class="back-design">
-						<label>Back Design</label>
-				        <input type="file" name="back" required />
-						<div class="clear"></div>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="button" hidden>
+				<div class="button">
 					<button type="submit" id="button" name="simpan" value="Simpan">
 						<span>
 							<span>
@@ -328,15 +315,6 @@
 					</button>
 				</div>
 			 <?php echo form_close(); ?>  
-				<div class="button">
-					<button type="submit" id="button_check" name="button_check" onclick="check_form()">
-						<span>
-							<span>
-								Lanjutkan >
-							</span>
-						</span>
-					</button>
-				</div>
 			</div>
 			<div class="clear"></div>
 		</div>

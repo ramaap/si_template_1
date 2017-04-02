@@ -15,7 +15,7 @@
 			<div>
 				<div>
 					<h2>Konfirmasi Pembayaran</h2>
-					 <?php echo form_open('front/confirm/add', 'id="form_add"'); ?> 
+					 <?php echo form_open_multipart('front/confirm/add', 'id="form_add"'); ?> 
 						<ul>
 							<li>
 								<label>Tanggal Pembayaran</label>
@@ -47,6 +47,10 @@
 							<li>
 								<label></label>
 								<textarea name="ket" required id="ket" placeholder="Keterangan"></textarea>
+							</li>
+							<li>
+								<label>Foto Bukti Transfer</label>
+								<input type="file" name="bukti_transfer" required>
 							</li>
 						</ul>
 						<input type="submit" id="button" name="simpan" value="Submit"  class="btn btn-success" />

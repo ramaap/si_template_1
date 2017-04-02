@@ -1043,7 +1043,7 @@
 				<img src="<?php echo base_url(); ?>include/front/images/product/flyer/flyer-checkout.png">
 			</div>
 			<div class="detail">
-			<?php echo form_open_multipart('front/checkout/checkout_flyer/add', 'id="form_checkout"'); ?>	
+			<?php echo form_open('front/checkout/checkout_flyer/add', 'id="form_checkout"'); ?>	
 				<h3>Original Flyer</h3>
 				<p>Sebarkan kepada setiap orang informasi bisnis yang anda miliki. Murah, praktis, sangat ideal untuk dibagikan kepada semua orang.</p>
 				<div class="selects">
@@ -1099,19 +1099,6 @@
 						<input hidden readonly id="harga" name="harga" type="number" />                     
 						<input hidden readonly id="total_db" name="total_db" type="number" />           
 					</div>
-				</div>
-				<div class="upload">
-					<div class="front-design">
-						<label>Front Design</label>
-				        <input type="file" name="front" required />
-						<div class="clear"></div>
-					</div>
-					<div class="back-design">
-						<label>Back Design</label>
-				        <input type="file" name="back" />
-						<div class="clear"></div>
-					</div>
-					<div class="clear"></div>
 				</div>
 				<div class="button">
 					<button type="submit" id="button" name="simpan" value="Simpan">

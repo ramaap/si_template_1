@@ -2,7 +2,13 @@
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
 <body class="login">
-<?php $this->load->view('front/slice/menu'); ?>
+<?php $this->load->view('front/slice/menu'); 
+
+if ($this->session->userdata('alert') != '')
+        echo "<script>alert('" . $this->session->userdata('alert') . "')</script>";
+
+    $this->session->set_userdata('alert', '');
+?>
 
 	<div class="main container">
 		<div class="cart-checkout">

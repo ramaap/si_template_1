@@ -18,11 +18,9 @@ class contact extends CI_Controller {
         $this->lib->check_lokasi("Contact");     
         $this->load->view('front/pages/contact');
     }
-	public function Post()
-    {
-			$ci = get_instance();
-            
-			$config = array(
+public function Post()
+	{
+			$config = Array(
 				'protocol' => 'smtp',
 				'smtp_host' => 'mail.pixaonline.com', //change this
 				'smtp_port' => 587,
@@ -30,35 +28,35 @@ class contact extends CI_Controller {
 				'smtp_pass' => 'pixaonline1234',
 				'mailtype'  => 'html', 
 				'charset'   => 'iso-8859-1'
-			);
-			$ci->load->library('email', $config);
-			$ci->email->initialize($config);
-	 
-			$ci->email->from('contact@pixaonline.com', 'pixaonline.com');
-			$list = array('contact@pixaonline.com');
-			$email = $this->input->post('email');
-			$name = $this->input->post('nama');
-			$telp = $this->input->post('telp');
-			$subject = $this->input->post('subject');
-			$pesan = $this->input->post('pesan');
-			$message ='<b>Nama :</b><br/>'. $name. '<br/><br/><b>E-mail :</b><br/>' . $email. '<br/><br/><b>Pesan :</b><br/>' . $telp. '<br/><br/><br/><br/>'. $pesan. '<br/><br/><br/><br/>
+		   
+		);
+		 
+		$this->load->library('email', $config);    
+		$this->email->set_newline("\r\n"); /* for some reason it is needed */
+		 
+		$this->email->from('contact@pixaonline.com', 'pixaonline.com');
+		$email = $this->input->post('email');
+		$name = $this->input->post('nama');
+		$telp = $this->input->post('telp');
+		$subject = $this->input->post('subject');
+		$pesan = $this->input->post('pesan');
+		$message ='<b>Nama :</b><br/>'. $name. '<br/><br/><b>E-mail :</b><br/>' . $email. '<br/><br/><b>Telp:</b><br/>' . $telp. '<br/><br/><b>Pesan:</b><br/>'. $pesan. '<br/><br/><br/><br/>
 			Dikirim melalui kontak website Pixa Online | pixaonline.com
 						'; 
 						
-			$ci->email->to($list);
-			$ci->email->subject('pixaonline.com');
-			$ci->email->message($message);
-			if ($this->email->send()) 
-			{
-				
-				$email = $this->input->post('mail');
-				$ci->email->from('contact@pixaonline.com', 'Pixa Online | pixaonline.com');
-				$list = array($email);
-				$email = $this->input->post('email');
-				$name = $this->input->post('nama');
-				$telp = $this->input->post('telp');
-				$pesan = $this->input->post('pesan');
-				$message =	'Dear '.$name.', <br/><br/>
+		$this->email->to('contact@pixaonline.com');
+		$this->email->subject('Contact Us Pixaonline.com');
+		$this->email->message($message);
+		 
+		if($this->email->send())
+		{
+			$this->email->from('contact@pixaonline.com', 'Pixa Online | pixaonline.com');
+			$email = $this->input->post('email');
+			$name = $this->input->post('nama');
+			$telp = $this->input->post('telp');
+			$pesan = $this->input->post('pesan');
+			// $list = array($email);
+			$message =	'Dear '.$name.', <br/><br/>
 							Thank you for your message.<br/>
 							We will respond your message in 2 days.<br/><br/>
 							If you need more information, please contact us.<br/><br/>
@@ -69,34 +67,34 @@ class contact extends CI_Controller {
 							Phone/Fax:0274-553700 <br/>
 						';
 				
-				$ci->email->to($list);
-				$ci->email->subject('Pixa Online | pixaonline.com Reply to: '.$name);
-				$ci->email->message($message);
-				if ($this->email->send()) 
-				{  
-					echo "<script>
-						alert('Email sent!');
-						</script>";             
-						redirect('front/contact','refresh');
-				}
-				else
-				{
-					echo "<script>
-						alert('Email failed to send!');
-						</script>"; 
-					show_error($this->email->print_debugger());
-				} 
-				  
-						
-			} 
+			$this->email->to($email);
+			$this->email->subject('Pixa Online | pixaonline.com Reply to: '.$name);
+			$this->email->message($message);
+				
+			if($this->email->send())
+			{
+			  echo "<script>
+					//alert('Email sent!');
+					</script>";            
+        $this->load->view('front/pages/contact');
+			}
 			else
 			{
-					echo "<script>
-							alert('Email failed to send!');
-							</script>"; 
-				show_error($this->email->print_debugger());
-			}  
-    }
+				echo "<script>
+					alert('Email failed to send!');
+					</script>"; 
+					show_error($this->email->print_debugger());
+			}
+		}
+		else
+		{
+			echo "<script>
+					alert('Email failed to send!');
+					</script>"; 
+					show_error($this->email->print_debugger());
+		}
+		
+	}
 	public function add_newsletter()
     {
 			// $ci = get_instance();

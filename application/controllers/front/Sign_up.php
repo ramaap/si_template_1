@@ -51,7 +51,8 @@ class sign_up extends CI_Controller {
 				);
 				$this->data_customer->insert($customerCustomer);
 				
-                echo '<script>alert("Sign-Up Sukses, Silahkan melakukan Login")</script>';  		
+               // echo '<script>alert("Sign-Up Sukses, Silahkan melakukan Login")</script>'; 
+ 		$this->session->set_userdata('alert','Sign-Up Sukses, Silahkan melakukan Login');
 					 redirect('front/login_customer');
             } else {
                 echo '<script>alert("Konfirmasi Password gagal,silahkan cek kembali inputan")</script>';
