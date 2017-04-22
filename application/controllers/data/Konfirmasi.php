@@ -33,6 +33,7 @@ class konfirmasi extends CI_Controller {
              $temp['index'] = $index;
             $temp['datamodel'] = $tmp->konfirm_id; 
             $temp['status'] = $tmp->status;
+			$temp['bukti_transfer'] = base_url().'/include/bukti_transfer/'.$tmp->bukti_transfer;
             array_push($array, $temp);
             $index++;
         }
@@ -62,6 +63,11 @@ class konfirmasi extends CI_Controller {
             $temp['status'] = $tmp->status;
             $temp['is_delete'] = $tmp->is_delete;
             $temp['is_permanent'] = $tmp->is_permanent;
+			$temp['bukti_transfer'] = base_url().'/include/bukti_transfer/'.$tmp->bukti_transfer;
+			$temp['bukti_transfer'] = "xxx";
+			if (file_exists('./include/bukti_transfer/'.$tmp->bukti_transfer)&&$tmp->bukti_transfer!="") {
+				$temp['bukti_transfer'] = $tmp->bukti_transfer;
+			}
             array_push($array, $temp);
             $index++;
         }

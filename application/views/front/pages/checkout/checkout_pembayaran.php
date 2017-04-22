@@ -256,7 +256,7 @@
 									<span>: <?php echo $val->jumlah; ?></span>
 								</li>
 								<li>
-									 <a title="Hapus Data" id="datamodel_<?php echo $val->cart_id; ?>" value="<?php echo $val->cart_id; ?>"  onclick="deleted(<?php echo $val->cart_id; ?>)">hapus</a>
+									 <a title="Hapus Data" href="#" id="datamodel_<?php echo $val->cart_id; ?>" value="<?php echo $val->cart_id; ?>"  onclick="deleted(<?php echo $val->cart_id; ?>)">hapus</a>
 								</li>
 							</ul>
 						</div>
@@ -380,13 +380,13 @@
 							</li>
 							<li>
 								<label>Kota</label>
-								<select name="kota2" required id="kota2">
+								<select name="kota2" required id="kota2" onchange="tampil_data('data')">
 								<option value="" selected="" disabled="">Pilih Kota</option>
 								</select>
 							</li>
 							<li>
 								<label>Kecamatan</label>
-								<input name="kecamatan2" required id="kecamatan2" placeholder="Kecamatan" >
+								<input name="kecamatan2" required id="kecamatan2" onchange="tampil_data('data')" placeholder="Kecamatan" >
 							</li>
 							<li>
 								<label>Kodepos</label>
@@ -394,7 +394,7 @@
 							</li>
 							<li>
 								<label>Berat</label>
-								<input type="number" required name="berat" id="berat" placeholder="gram" >
+								<input type="number" required name="berat" onkeyup="tampil_data('data')" onchange="tampil_data('data')" id="berat" placeholder="gram" >
 							</li>
 							<li>
 								<label>Kurir</label>

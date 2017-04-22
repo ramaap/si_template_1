@@ -21,7 +21,7 @@
 					</div>
 					<div class="column info-action">
 						<strong>Original Bussines Card</strong>
-						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+						<p>Menggunakan kertas standar, pilihan, harga, dan kualitas terjangkau.</p>
 						<p>Harga Mulai IDR18000 / box</p>
 						<a href="<?php echo site_url("front/checkout/checkout_business_card/"); ?>">
 							<button>
@@ -40,7 +40,7 @@
 					</div>
 					<div class="column info-action">
 						<strong>Deluxe Bussines Card</strong>
-						<p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+						<p>Menggunakan kertas fancy import, dicetak dengan kualitas terbaik dan tampilan yang super deluxe. Dapat menggunakan tambahan finishing seperti hotprint atau emboss</p>
 						<p>Harga Mulai IDR18000 / box</p>
 						<a href="">
 							<button>
@@ -64,23 +64,23 @@
 					</tr>
 					<tr>
 						<td class="colored"></td>
-						<td>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</td>
-						<td>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</td>
+						<td>Pilihan terbaik untuk Anda yang mencari kartu nama dengan harga yang terjangkau Kami rekomendasikan laminasi untuk hasil terbaik</td>
+						<td>Berikan kesan pertama yang luar biasa dengan kartu nama mewah. Laminasi tidak kami rekomendasikan karena akan menutup keindahan jenis kertas</td>
 					</tr>
 					<tr>
 						<td class="colored">Kertas</td>
-						<td>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</td>
-						<td>$Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</td>
+						<td>Menggunakan kertas standar, Art Cartoon yang terdapat dalam 2 pilihan gramatur yaitu 230gr dan 260gr</td>
+						<td>Menggunakan kertas fancy tebal dan terdapat 2 pilihan kertas yaitu Cougar Opaque 250gr dan Coronado 270gr (kertas bertekstur)</td>
 					</tr>
 					<tr>
 						<td class="colored">Kualitas Cetak</td>
-						<td>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</td>
-						<td>$Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</td>
+						<td>Dicetak dengan kualitas baik dengan menggunakan mesin digital printing</td>
+						<td>Dicetak dengan mesin terbaik, mesin cetak Speedmaster 53 memberikan kualitas yang tinggi</td>
 					</tr>
 					<tr>
 						<td class="colored">Harga</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>$Lorem ipsum dolor sit amet.</td>
+						<td>Mulai dari 18.000/Box</td>
+						<td>Mulai dari 32.000/Box</td>
 					</tr>
 				</table>
 			</div>
