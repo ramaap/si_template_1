@@ -34,7 +34,7 @@
 								<a href="<?php echo site_url('front/login_customer/logout')?>">Log out</a>
 							</li>
 							<li>
-								<a href="<?php echo site_url('front/user_profile')?>">User Profile</a>
+								<a href="<?php echo site_url('front/user_profile')?>">Member Area</a>
 							</li>
 						</ul>
 					</div>
@@ -60,6 +60,7 @@
 					<li><a href="<?php echo site_url('front/what_we') ?>">What we make</a></li>
 					<li><a href="<?php echo site_url('front/contact') ?>">Contact</a></li>
 					<li><a href="<?php echo site_url('front/question') ?>">Question?</a></li>
+					<li><a href="<?php echo site_url('front/custom_order') ?>">Custom</a></li>
 				</ul>
 			</div>
 			<script type="text/javascript">
@@ -74,6 +75,19 @@
 				    });
 				});
 			</script>
+			<!--Start of Tawk.to Script-->
+			<script type="text/javascript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+			(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/589355d3fd0c4f0a061876cb/default';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+			})();
+			</script>
+			<!--End of Tawk.to Script-->
 			<div class="clear"></div>
 		</div>
 	</header>

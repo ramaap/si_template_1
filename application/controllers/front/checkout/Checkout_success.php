@@ -14,7 +14,11 @@ class checkout_success extends CI_Controller {
 
 	public function index() {
         $this->lib->check_session_customer();
-        $this->lib->check_lokasi("Checkout");     
-        $this->load->view('front/pages/checkout/checkout_success');
+        $this->lib->check_lokasi("Checkout"); 
+		$data['order'] = $this->db->query("select *,order_ongkir+order_total as total from transaksi
+								  where is_delete=0 
+								  and order_id = ".$this->session->userdata('order_id')."
+								  ")->row();    
+        $this->load->view('front/pages/checkout/checkout_success',$data);
     }
 }

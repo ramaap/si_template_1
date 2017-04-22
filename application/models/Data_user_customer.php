@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class data_user_customer extends CI_Model {
 
     public function get_by_username_password($username, $password) {
-        $this->db->select('*,u.user_id as user_id');
+        $this->db->select('*,u.user_id as user_id,a.customer_id as customer_id');
         $this->db->from('data_user_customer u');
         $this->db->join('customer a', 'a.user_id=u.user_id');
         $this->db->join('data_role b', 'b.role_id=u.role_id');

@@ -43,15 +43,16 @@ class sign_up extends CI_Controller {
 					'customer_email' => urldecode($_POST['customer_email']),
 					'customer_telp' => urldecode($_POST['customer_telp']),
 					'customer_alamat' => urldecode($_POST['customer_alamat']),
-					'customer_provinsi' => urldecode($_POST['customer_provinsi']),
-					'customer_kota' => urldecode($_POST['customer_kota']),
+					'customer_provinsi_id' => urldecode($_POST['customer_provinsi_id']),
+					'customer_kota_id' => urldecode($_POST['customer_kota']),
 					'customer_kecamatan' => urldecode($_POST['customer_kecamatan']),
 					'customer_kode_pos' => urldecode($_POST['customer_kode_pos']),
 					'last_update' => date("y-m-d h:i:s")
 				);
 				$this->data_customer->insert($customerCustomer);
 				
-                echo '<script>alert("Sign-Up Sukses, Silahkan melakukan Login")</script>';  		
+               // echo '<script>alert("Sign-Up Sukses, Silahkan melakukan Login")</script>'; 
+ 		$this->session->set_userdata('alert','Sign-Up Sukses, Silahkan melakukan Login');
 					 redirect('front/login_customer');
             } else {
                 echo '<script>alert("Konfirmasi Password gagal,silahkan cek kembali inputan")</script>';

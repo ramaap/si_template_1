@@ -1,19 +1,445 @@
+/*general*/
+li{list-style: none}
+ul{padding: 0px;}
+a{color: #385379;}
+a:hover{text-decoration: none;}
+
 /*user-dashboard Start*/
-	.dashboard .sidemenu{
-		float: left;
-		width: 25%;
-		padding-right: 20px;
-	}
-	.dashboard .main-content{
-		float: left;
-		width: 75%;
-	}
-	.dashboard .main-content .tab-content{
-		display: none;
-	}
-	.dashboard .main-content .tab-content.current{
-		display: block;
-	}
+.dashboard .sidemenu{
+    float: left;
+    width: 23%;
+    margin-right: 20px;
+    min-height: 300px;
+}
+.dashboard .sidemenu a:hover{
+	color: #ffcf3e;
+}
 
-
+.dashboard .main-content{
+	float: left;
+	width: 75%;
+}
+.dashboard .main-content label{
+	width: 150px;
+	float: left;
+	line-height: 40px;
+}
+.dashboard .main-content input,
+.dashboard .main-content textarea,
+.dashboard .main-content select{
+    min-width: 250px;
+    width: 320px;
+    height: 40px;
+	padding: 10px;
+}
+.dashboard .main-content textarea{
+	min-height: 200px;
+}
+.dashboard .main-content li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.dashboard .main-content .tab-content{
+	display: none;
+}
+.dashboard .main-content .tab-content.current{
+	display: block;
+}
+.dashboard .main-content .check-shipping input{
+	padding: 10px;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+.dashboard .main-content input#button,
+.dashboard .main-content .check-shipping input#button{
+    background-color: #385379;
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+}
 /*user-dashboard End*/
+
+/*custom order start*/
+.custom .main.container label{
+	width: 150px;
+	float: left;
+	line-height: 40px;
+}
+.custom .main.container li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.custom .main.container input,
+.custom .main.container textarea,
+.custom .main.container select{
+    min-width: 250px;
+    width: 320px;
+    height: 40px;
+	padding: 10px;
+}
+.custom .main.container textarea{
+	min-height: 200px;
+}
+.custom .main.container input#button{
+    background-color: #385379;
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+}
+/*custom order end*/
+
+/*confirm payment*/
+.confirm .main.container{
+	margin-top: 20px;
+}
+.confirm .main.container li{
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.confirm .main.container label{
+    min-width: 200px;
+}
+.confirm .main.container input{
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+}
+.confirm .main.container textarea{
+    resize: none;
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+}
+.confirm .main.container select{
+    width: 60%;
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding: 0px 10px;
+    height: 40px;
+}
+
+.confirm .main.container input#button{
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+    width: 200px;
+    margin-left: 200px;
+    background-color: #ffd03e;
+    color: #404041;
+}
+/*confirm payment end*/
+
+/*sitemap start*/
+.sitemap a{
+    font-size: 20px;
+}
+.sitemap a:hover{
+    color: #ffcf3e;
+}
+.sitemap li.level-1,
+.sitemap li.level-2,
+.sitemap li.level-3{
+	padding-left: 20px;
+}
+.sitemap li.level-0>a{
+    font-family: 'harmonia-black';
+}
+.sitemap li.level-1>a{
+    font-family: 'harmonia-bold';
+}
+.sitemap li.level-2>a{
+    font-family: 'harmonia-bold';
+}
+.sitemap li.level-3>a{
+    font-family: 'harmonia-light';
+}
+
+/*sitemap end*/
+
+/*Question/FAQ*/
+.question .main.container .title{
+    margin: 20px;
+}
+.question .main.container .title img{
+	width: 250px;
+}
+.question .left {
+    float: left;
+    width: 25%;
+}
+.question .left h2{    
+	text-align: right;
+    margin-right: 20px;
+}
+.question .right {
+    float: left;
+    width: 75%;
+    border-left: 2px solid #9e9e9e;
+    padding-left: 20px;
+}
+.question .bottom {
+    float: none;
+    position: relative;
+    clear: both;
+    width: 40%;
+    margin: 40px auto;
+}
+/*Question/FAQ end*/
+
+/*whatwe*/
+.whatwe .quote{
+	width: 50%;
+	margin: 40px auto;
+}
+.whatwe .content{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+.whatwe .address {
+    margin-top: 30px;
+}
+.whatwe .address img{
+	width: 100%;
+	margin-top: 30px;
+}
+.whatwe .what-we-make {
+    margin-top: 40px;
+}
+.whatwe .what-we-make img{
+	width: 250px;
+    margin-bottom: 30px;
+}
+
+
+.whatwe .quote h2{
+	text-transform: none;
+	font-size: 30px;
+}
+.whatwe .below .container{
+	max-width: 1000px;
+    margin-top: 30px;
+}
+.whatwe .below .container h2{
+    font-family: 'harmonia-bold';
+    color: #9E9E9E;
+    font-size: 20px;
+}
+.whatwe .below .container span{
+    font-family: 'harmonia-light';
+    color: #9E9E9E;
+}
+.whatwe .below .container .title{
+	width: 150px;
+}
+.whatwe .below .container .title img{
+	width: 100%;
+}
+.whatwe .bx-wrapper .bx-viewport{
+	border: 0px;
+    box-shadow: none;
+}
+.whatwe .bx-controls-direction .bx-prev, .bx-controls-direction .bx-next{
+    background-size: 24px;
+    background-position: 0px 0px;
+}
+.whatwe .bx-controls-direction .bx-prev{
+	background-image: url('../images/index/prev.png');
+    left: -50px;
+}
+.whatwe .bx-controls-direction .bx-next{
+	background-image: url('../images/index/next.png');
+    right: -50px;
+}
+.whatwe .bx-controls-direction .bx-prev:hover,
+.whatwe .bx-controls-direction  .bx-next:hover{
+    background-position: 0px 0px;
+}
+
+/*whatwe end*/
+
+
+
+/*newsletter*/
+	.newsletter {
+	    position: relative;
+	    overflow: hidden;
+	    width: 80%;
+	    margin: 0 auto;
+	    background: #e6e6e6;
+    	padding: 30px 50px;
+	}
+	.news-left {
+	    float: left;
+	    width: 50%;
+	}
+	.news-left input[type="text"] {
+	    height: 35px;
+	    width: 80%;
+	    padding: 10px;
+    	margin-top: 20px;
+	}
+	.news-left.social {
+	    text-align: center;
+	}
+	.news-left.social .social{
+	    width: 65px;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	}
+	.news-left.social em{
+		background-image: url(../images/page/faq/social.png);
+		background-position: -7px -9px;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-bottom: 10px;
+		position: relative;
+		left: 0px;
+		top: 0px;
+		background-size: 80px;
+		float: left;
+	}
+	.news-left.social em.facebook{
+		background-position: -42px -9px;
+	}
+
+/*newsletter end*/
+
+/*contact*/
+.contact .title{
+	width: 150px;
+    margin: 40px 0px;
+}
+.contact .title img{
+	width: 100%;
+}
+.contact .content.form {
+    margin: 40px 0px;
+}
+.contact .main.container label{
+	width: 150px;
+	float: left;
+	line-height: 40px;
+}
+.contact .main.container li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.contact .main.container input,
+.contact .main.container textarea,
+.contact .main.container select{
+    min-width: 250px;
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    box-shadow: none;
+}
+.contact .main.container textarea{
+	min-height: 200px;
+}
+.contact .main.container input#button{
+    border: none;
+    padding: 10px;
+    line-height: 10px;
+    min-width: 220px;
+    color: white;
+    font-family: 'harmonia-black';
+	border-radius: 10px;
+    width: 200px;
+    margin-left: 150px;
+    background-color: #ffd03e;
+    color: #404041;
+}
+/*contact end*/
+
+
+/*responsive*/
+
+@media only screen and (max-width: 770px) {
+	.dashboard .main-content,
+	.dashboard .sidemenu{width: 100%;}
+	.dashboard .sidemenu{
+		min-height: auto;
+	    margin-right: 0px;
+	    border-bottom: 1px solid grey;
+	    padding-bottom: 20px;
+	}
+	.custom .main.container input,
+	.custom .main.container textarea,
+	.custom .main.container select,
+	.dashboard .main-content input,
+	.dashboard .main-content textarea,
+	.dashboard .main-content select,
+	.main.container iframe{
+		width: 100%;
+    	margin-left: 0px !important;
+	}
+	.dashboard .main-content .check-shipping input{
+		margin-bottom: 20px;
+	}
+	.bx-controls-direction .bx-prev{
+		left: -25px;
+	}
+	.bx-controls-direction .bx-next{
+		right: -25px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.question .bottom{
+		width: 100%;
+	}
+	.question .left,
+	.question .right{
+	    float: none;
+	    width: 100%;
+	}
+	.question .left h2{
+	    text-align: left;
+	    font-family: 'harmonia-bold';
+	}
+	.newsletter{
+	    width: 100%;
+	    padding: 10px;
+	}
+	.news-left{
+	    float: none;
+	    width: 100%;
+	}
+	.news-left.social {
+	    text-align: center;
+	    margin-top: 20px;
+	}
+	.contact .main.container input#button,
+	.confirm .main.container input#button{
+	    width: 100%;
+	    margin: 0px;
+	}
+	.contact .main.container input, 
+	.contact .main.container textarea, 
+	.contact .main.container select,
+	.confirm .main.container input, 
+	.confirm .main.container textarea, 
+	.confirm .main.container select{
+		width: 100%;
+	}
+}

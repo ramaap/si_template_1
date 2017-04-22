@@ -54,53 +54,17 @@
 							<ul>
 								<li>
 									<label>Total Item</label>
-									<span>: 1</span>
+									<span>: <?php echo $jml_item->item; ?></span>
 								</li>
 								<li>
 									<label>Total Price</label>
-									<span>: IDR 34.000,-</span>
+									<span>: IDR <?php echo number_format($total->order_total,0,",",".").",-"; ?></span>
+								</li>
+								<li>
+									<label>Total Ongkir</label>
+									<span>: IDR <?php echo number_format($total->order_ongkir,0,",",".").",-"; ?></span>
 								</li>
 							</ul>
-						</div>
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-
-				<div class="login">
-					<div class="container">
-						<div class="left">
-							<h2>Login</h2>
-						</div>
-						<div class="right">
-							Hello Pelanggan!
-						</div>
-
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-
-				<div class="shipping">
-					<div class="container">
-						<h2>Informasi Pengiriman</h2>
-						<p>alamat pelanggan, no telp</p>
-						<div class="lanjutkan">
-							<span>Lihat</span>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="billing">
-					<div class="container">
-						<h2>Informasi Penagihan</h2>
-						<p>alamat pelanggan, no telp</p>
-						<div class="lanjutkan">
-							<span>Lihat</span>
 						</div>
 					</div>
 					<div class="clear"></div>
@@ -109,101 +73,109 @@
 					<div class="left">
 						<h2>Pembayaran</h2>
 						<p>
-							Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam qualisque cotidieque, ne dolores intellegebat ius. Dicit nonumes vim cu, ad vix imperdiet assentior.
+							Mohon maaf untuk saat ini Kami hanya dapat melayani melayani pembayaran melalui transfer Bank.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, mei sint concludaturque ea. An nam nostrum disputando, mea ei agam qualisque cotidieque, ne dolores intellegebat ius. Dicit nonumes vim cu, ad vix imperdiet assentior.
+							Mohon pembayaran jumlah sesuai yang tertera pada informasi Total pembayaran.<br/>
+							Pembayaran dan konfirmasi transfer haru dilakukan dalam waktu 2 jam<br/>
+							atau pesanan akan otomatis dibatalkan.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, mei sint concludaturque ea. 
+							Transfer dapat dilakukan melalui 
 						</p>
 						<div class="bank">
 							<div class="bca">
 								<img src="<?php echo base_url(); ?>include/front/images/checkout/bca.png">
 								<strong>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
+									<p>Bank Central Asia</p>
+									<p>037 233 5333</p>
+									<p>Ronny Kurniawan</p>
 								</strong>
 							</div>
 						</div>
 						<div class="shipping-billing">
 							<div class="left">
 								<div class="title">
-									<h3>Informasi Pengiriman</h3><a href="">(edit)</a>
+									<h3>Informasi Pengiriman</h3><a href="<?php echo site_url("front/checkout/checkout_pembayaran_edit/"); ?>">(edit)</a>
 									<div class="clear"></div>
 								</div>
 								<div>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
-									<p>Lorem ipsum dolor</p>
+									<p><?php echo $pengiriman->customer_nama; ?></p>
+									<p><?php echo $pengiriman->customer_email; ?></p>
+									<p><?php echo $pengiriman->customer_telp; ?></p>
+									<p><?php echo $pengiriman->customer_alamat; ?></p>
+									<p><?php echo $pengiriman->customer_kecamatan; ?>,<?php echo $pengiriman->kota; ?></p>
+									<p><?php echo $pengiriman->nama_prov; ?></p>
+									<p><?php echo $pengiriman->customer_kode_pos; ?></p>
 								</div>
 							</div>
 							<div class="right">
 								<div class="title">
-									<h3>Informasi Penagihan</h3><a href="">(edit)</a>
+									<h3>Informasi Penagihan</h3><a href="<?php echo site_url("front/checkout/checkout_pembayaran_edit2/"); ?>">(edit)</a>
 									<div class="clear"></div>
 								</div>
 								<div>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
-									<p>Lorem ipsum dolor</p>
-									<p>0912 0912 0912 0912</p>
-									<p>Loremdolor Koasjdo</p>
-									<p>Lorem ipsum dolor</p>
+									<p><?php echo $penagihan->customer_nama; ?></p>
+									<p><?php echo $penagihan->customer_email; ?></p>
+									<p><?php echo $penagihan->customer_telp; ?></p>
+									<p><?php echo $penagihan->customer_alamat; ?></p>
+									<p><?php echo $penagihan->customer_kecamatan; ?>,<?php echo $pengiriman->kota; ?></p>
+									<p><?php echo $penagihan->nama_prov; ?></p>
+									<p><?php echo $penagihan->customer_kode_pos; ?></p>
 								</div>
 							</div>
 							<div class="clear"></div>
 						</div>
 					</div>
 					<div class="right">
-						<div class="cart-container">
-							<img src="<?php echo base_url(); ?>include/front/images/checkout/pembayaran.jpg">
-							<div class="items">
-								<h3 class="item-name">Original Bussiness Card</h3>
-								<div class="detailed">
-									<ul>
-										<li>
-											<label>Ukuran</label>
-											<span>: 90x50mm</span>
-										</li>
-										<li>
-											<label>Tipe Kertas</label>
-											<span>: AC 260gr</span>
-										</li>
-										<li>
-											<label>Sisi Cetak</label>
-											<span>: 1 Muka</span>
-										</li>
-										<li>
-											<label>Finishing</label>
-											<span>: Rounded</span>
-										</li>
-										<li>
-											<label>Laminasi</label>
-											<span>: -</span>
-										</li>
-										<li>
-											<label>Jumlah Order</label>
-											<span>: 1 Box</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="separator"></div>
-							<div class="total">
-								<label>Total</label>
-								<strong>IDR 34.000,-</strong>
-							</div>
+				<div class="cart-container">
+				<?php
+				foreach($cart as $val)
+				{
+				?>
+					<center><img style="width:400px;height:200px;" src="<?php echo base_url(); ?>include/order/<?php echo $val->foto_front; ?>"></center>
+					<div class="items">
+						<h3 class="item-name"><?php echo $val->nama; ?></h3>
+						<div class="detailed">
+							<ul>
+								<li>
+									<label>Ukuran</label>
+									<span>:<?php echo $val->ukuran; ?></span>
+								</li>
+								<li>
+									<label>Tipe Kertas</label>
+									<span>: <?php echo $val->kertas_nama; ?></span>
+								</li>
+								<li>
+									<label>Sisi Cetak</label>
+									<span>: <?php echo $val->sisi_cetak; ?> Muka</span>
+								</li>
+								<li>
+									<label>Finishing</label>
+									<span>: <?php echo $val->tambahan_ket; ?></span>
+								</li>
+								<li>
+									<label>Jumlah Order</label>
+									<span>: <?php echo $val->jumlah; ?></span>
+								</li>
+							</ul>
 						</div>
 					</div>
+					<div class="separator"></div>
+					<div class="total">
+						<label>Total</label>
+						<strong>IDR <?php echo number_format($val->harga_total,0,",","."); ?>,-</strong>
+					</div>
+					<br/>
+				<?php } ?>
+					<div class="total" align="right">
+						<label>TOTAL ORDER : </label>
+						<strong>IDR <?php echo number_format($total->total,0,",","."); ?>,-</strong>
+					</div>
+				</div>
+					</div>
 					<p>
-						Lorem ipsum dolor sit amet, mei sint concludaturque ea. 
+						Mohon periksa kembali semua informasi sebelum melanjutkan pesanan Anda. 
 					</p>
 					<a href="<?php echo site_url("front/checkout/checkout_success/"); ?>">
 						<div class="lanjutkan">

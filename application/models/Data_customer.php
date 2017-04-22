@@ -13,7 +13,33 @@ class data_customer extends CI_Model {
 		 $this->db->select('*,u.user_id as user_id,u.is_permanent as is_permanent');
         $this->db->from('customer u');
         $this->db->join('data_user_customer a', 'a.user_id=u.user_id and a.is_delete=0');
+        $this->db->join('provinsi x', 'x.id_prov=u.customer_provinsi_id');
+        $this->db->join('kota y', 'y.id_kota=u.customer_kota_id');
         $this->db->where('u.is_delete', '0');
+		$query = $this->db->get();
+		return $query->result() ;
+	}
+	public function get_all_alamat()
+	{
+		 $this->db->select();
+        $this->db->from('buku_alamat u');
+        // $this->db->join('customer a', 'a.user_id=u.user_id and a.is_delete=0');
+        $this->db->join('provinsi x', 'x.id_prov=u.customer_provinsi_id');
+        $this->db->join('kota y', 'y.id_kota=u.customer_kota_id');
+        $this->db->where('u.is_delete', '0');
+        $this->db->where('u.customer_id', $this->session->userdata('customer_id'));
+		$query = $this->db->get();
+		return $query->result() ;
+	}
+	public function get_all_alamat_2($customer_id)
+	{
+		 $this->db->select();
+        $this->db->from('buku_alamat u');
+        // $this->db->join('customer a', 'a.user_id=u.user_id and a.is_delete=0');
+        $this->db->join('provinsi x', 'x.id_prov=u.customer_provinsi_id');
+        $this->db->join('kota y', 'y.id_kota=u.customer_kota_id');
+        $this->db->where('u.is_delete', '0');
+        $this->db->where('u.customer_id', $customer_id);
 		$query = $this->db->get();
 		return $query->result() ;
 	}
@@ -60,6 +86,14 @@ class data_customer extends CI_Model {
 		$data = array('customer_id' => $customer_id);
 		$this->db->delete('customer', $data);
 		$temp=$this->session->set_userdata("last_id",$customer_id); 
+	    return $temp;
+		
+	}
+	public function delete_permanent_alamat($alamat_id)
+	{  
+		$data = array('alamat_id' => $alamat_id);
+		$this->db->delete('buku_alamat', $data);
+		$temp=$this->session->set_userdata("last_id",$alamat_id); 
 	    return $temp;
 		
 	}

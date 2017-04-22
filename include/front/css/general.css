@@ -54,7 +54,23 @@ span{
     font-family: 'harmonia-light';
     color: black;
 }
-
+.carousel-indicators{
+	bottom: 8px;
+}
+.carousel-indicators li{
+	margin:0 10px;
+	background-color: #fff;
+}
+.carousel-indicators li.active{
+	margin:0 10px;    
+	background-color: #000;
+}
+.carousel.slide{
+	margin-bottom: 60px;
+}
+.bx-wrapper .bx-controls-direction a.disabled{
+	display: block;
+}
 /*Header	*/
 header .page-header-container{
 	position: relative;
@@ -90,7 +106,7 @@ header .page-header-container div.menu-mobile-container .tab-menu{
 header .page-header-container div.menu-mobile-container li{
 	list-style: none;
     float: left;
-    width: calc(100%/4);
+    width: calc(100%/5);
     text-align: center;
     line-height: 40px;
 }
@@ -320,7 +336,7 @@ footer .footer-container .menu-footer .menu li a{
 	header .page-header-container div.menu-nav li{
     	line-height: 20px;
     	font-size: 18px;
-    	margin: 15px;
+    	margin: 10px;
 	}
 	header .page-header-container div.menu-action .login{
 		margin-top: 15px;
@@ -426,8 +442,6 @@ footer .footer-container .menu-footer .menu li a{
 	footer .footer-container .menu-footer .menu ul{
 		padding-left: 0px;
 	}
-}
-@media only screen and (max-width: 360px){
 	header .page-header-container div.menu-mobile-container li,
 	header .page-header-container div.menu-mobile-container .tab-menu,
 	header .page-header-container div.menu-mobile-container #menu-mobile{
@@ -443,6 +457,8 @@ footer .footer-container .menu-footer .menu li a{
 	header .page-header-container div.menu-mobile-container li{
 		width: 100%;
 	}
+}
+@media only screen and (max-width: 360px){
 }
 
 

@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-2">
-<?php $this->load->view('front/slice/menu'); ?>
+<body class="login">
+<?php $this->load->view('front/slice/menu'); 
+
+if ($this->session->userdata('alert') != '')
+        echo "<script>alert('" . $this->session->userdata('alert') . "')</script>";
+
+    $this->session->set_userdata('alert', '');
+?>
 
 	<div class="main container">
 		<div class="cart-checkout">
@@ -18,7 +24,7 @@
 							echo form_open('front/login_customer', $attributes);
 							?>
 							<div class="username">
-								<input type="text" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+								<input type="text" name="username" class="form-control" placeholder="E-mail" required="" autofocus="">
 							</div>
 							<div class="password">
 								 <input type="password" name="password" class="form-control" placeholder="Password" required="">
@@ -57,21 +63,21 @@
 							
 						</div-->
 					</div>
-					<!--div class="separator"></div>
+					<div class="separator"></div>
 					<div class="right column">
 						<div class="button-quick">
 							<div>
 								<button>
 									<span>
 										<span>
-											Quick Order	
+											Quick Custom Order	
 										</span>
 									</span>
 								</button>
 							</div>
-							<p>Atau clik bila tidak ingin membuat akun</p>
+							<p>Click untuk Order sesuai keinginan</p>
 						</div>
-					</div-->
+					</div>
 					<div class="clear"></div>
 				</div>
 			</div>
