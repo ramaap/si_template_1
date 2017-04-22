@@ -133,6 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             {
                             var arr = JSON.parse(result);
                                     $('#status').val(arr[0].status);
+									$('#prev').attr("src",arr[0].bukti_transfer);
                                     $('#datamodel').val(arr[0].datamodel);
                                     show_remodal();
                             }
@@ -251,6 +252,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <td align="center" style="width:1%" class=" borderkanan" data-title="'No'">
 											<span>{{$index+1}}</span>
 										</td> 
+										<td align="center" class="col-md-1 borderkanan" data-title="'Foto'" sortable="'bukti_transfer'">
+											<img ng-if="order_pembelian.bukti_transfer != 'xxx'" width="50%" src="<?php echo base_url(); ?>/include/bukti_transfer/{{order_pembelian.bukti_transfer}}" />
+											<i ng-if="order_pembelian.bukti_transfer == 'xxx'"  class="fa fa-user fa-5x"> </i>
+										</td>  		
 										<td class="col-md-1 borderkanan" data-title="'Tgl Konfirmasi'" sortable="'tgl_ymd'">
                                             <span>{{order_pembelian.tgl}}</span>
                                         </td> 

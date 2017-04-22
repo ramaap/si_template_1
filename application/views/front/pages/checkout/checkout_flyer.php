@@ -21,6 +21,16 @@
 		 n=str_replace(n,"~",",");
 		 return n;
 	}
+	function cek_laminasi(){
+		jenis_kertas = $("#jenis_kertas").val();
+		if(jenis_kertas == 7 || jenis_kertas == 8)
+		{
+			$('#laminasi').val("Tidak");
+			document.getElementById("laminasi").disabled=true;
+		}
+		else
+			document.getElementById("laminasi").disabled=false;
+	}
 	
 	function cek_dl()//harga kertas tipe DL
 	{
@@ -133,209 +143,247 @@
 				if(jumlah == '100 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 68000;
+					{
+						if(laminasi == "Tidak")
+							harga = 68000;
+						else
+							harga = 122000;
+					}
 					else
-						harga = 131000;
+						{
+							if(laminasi == "Tidak")
+								harga = 131000;
+							else
+								harga = 239000;
+						}
 				}
 				else if(jumlah == '250 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 137000;
+					{
+						if(laminasi == "Tidak")
+							harga = 137000;
+						else
+							harga = 266000;
+					}
 					else
-						harga = 266000;
+					{
+						if(laminasi == "Tidak")
+							harga = 266000;
+						else
+							harga = 524000;
+					}
 				}
 				else if(jumlah == '500 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 243750;
+					{
+						if(laminasi == "Tidak")
+							harga = 243750;
+						else
+							harga = 413750;
+					}
 					else
-						harga = 477500;
+					{
+						if(laminasi == "Tidak")
+							harga = 477500;
+						else
+							harga = 817500;
+					}
 				}
 				else if(jumlah == '1000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 451800;
+					{
+						if(laminasi == "Tidak")
+							harga = 451800;
+						else
+							harga = 787800;
+					}
 					else
-						harga = 888600;
+					{
+						if(laminasi == "Tidak")
+							harga = 888600;
+						else
+							harga = 1560600;
+					}
 				}
 				else if(jumlah == '2000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 554500;
+					{
+						if(laminasi == "Tidak")
+							harga = 554500;
+						else
+							harga = 1055500;
+					}
 					else
-						harga = 888500;
+					{
+						if(laminasi == "Tidak")
+							harga = 888500;
+						else
+							harga = 1890500;
+					}
 				}
 				else if(jumlah == '3000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 770000;
+					{
+						if(laminasi == "Tidak")
+							harga = 770000;
+						else
+							harga = 1520000;
+					}
 					else
-						harga = 1220000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1220000;
+						else
+							harga = 2720000;
+					}
 				}
 				else if(jumlah == '5000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1109000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1109000;
+						else
+							harga = 2360000;
+					}
 					else
-						harga = 1693000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1693000;
+						else
+							harga = 4195000;
+					}
 				}
 			}
-			else if(jenis_kertas == 10) // art cartoon laminasi
-			{
-				if(jumlah == '100 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 122000;
-					else
-						harga = 239000;
-				}
-				else if(jumlah == '250 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 266000;
-					else
-						harga = 524000;
-				}
-				else if(jumlah == '500 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 413750;
-					else
-						harga = 817500;
-				}
-				else if(jumlah == '1000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 787800;
-					else
-						harga = 1560600;
-				}
-				else if(jumlah == '2000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1055500;
-					else
-						harga = 1890500;
-				}
-				else if(jumlah == '3000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1520000;
-					else
-						harga = 2720000;
-				}
-				else if(jumlah == '5000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 2360000;
-					else
-						harga = 4195000;
-				}
-			}
+			
 			else if(jenis_kertas == 11) // art cartoon 260gr
 			{
 				if(jumlah == '100 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 71600;
+					{
+						if(laminasi == "Tidak")
+							harga = 71600;
+						else
+							harga = 125600;
+					}
 					else
-						harga = 138500;
+					{
+						if(laminasi == "Tidak")
+							harga = 138600;
+						else
+							harga = 246500;
+					}
 				}
 				else if(jumlah == '250 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 145600;
+					{
+						if(laminasi == "Tidak")
+							harga = 145600;
+						else
+							harga = 274600;
+					}
 					else
-						harga = 283500;
+					{
+						if(laminasi == "Tidak")
+							harga = 283500;
+						else
+							harga = 541500;
+					}
 				}
 				else if(jumlah == '500 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 252250;
+					{
+						if(laminasi == "Tidak")
+							harga = 252250;
+						else
+							harga = 422250;
+					}
 					else
-						harga = 494500;
+					{
+						if(laminasi == "Tidak")
+							harga = 494500;
+						else
+							harga = 843500;
+					}
 				}
 				else if(jumlah == '1000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 468600;
+					{
+						if(laminasi == "Tidak")
+							harga = 468600;
+						else
+							harga = 804600;
+					}
 					else
-						harga = 922500;
+					{
+						if(laminasi == "Tidak")
+							harga = 922500;
+						else
+							harga = 1594500;
+					}
 				}
 				else if(jumlah == '2000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 688000;
+					{
+						if(laminasi == "Tidak")
+							harga = 688000;
+						else
+							harga = 1189000;
+					}
 					else
-						harga = 1122500;
+					{
+						if(laminasi == "Tidak")
+							harga = 1122500;
+						else
+							harga = 2124500;
+					}
 				}
 				else if(jumlah == '3000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 945000;
+					{
+						if(laminasi == "Tidak")
+							harga = 945000;
+						else
+							harga = 1695000;
+					}
 					else
-						harga = 1520000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1520000;
+						else
+							harga = 3020000;
+					}
 				}
 				else if(jumlah == '5000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1401000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1401000;
+						else
+							harga = 2652000;
+					}
 					else
-						harga = 2193000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2193000;
+						else
+							harga = 4695000;
+					}
 				}
 			}
-			else if(jenis_kertas == 12) // art cartoon 260gr laminasi
-			{
-				if(jumlah == '100 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 125600;
-					else
-						harga = 246500;
-				}
-				else if(jumlah == '250 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 274600;
-					else
-						harga = 541500;
-				}
-				else if(jumlah == '500 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 422250;
-					else
-						harga = 834500;
-				}
-				else if(jumlah == '1000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 804600;
-					else
-						harga = 1594500;
-				}
-				else if(jumlah == '2000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1189000;
-					else
-						harga = 2124500;
-				}
-				else if(jumlah == '3000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1695000;
-					else
-						harga = 3020000;
-				}
-				else if(jumlah == '5000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 2652000;
-					else
-						harga = 4695000;
-				}
-			}
+			
 	}
 	
 	function cek_a5()//harga kertas tipe A5
@@ -449,209 +497,247 @@
 				if(jumlah == '100 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 95500;
+					{
+						if(laminasi == "Tidak")
+							harga = 95500;
+						else
+							harga = 170500;
+					}
 					else
-						harga = 183000;
+					{
+						if(laminasi == "Tidak")
+							harga = 183000;
+						else
+							harga = 333000;
+					}
 				}
 				else if(jumlah == '250 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 183250;
+					{
+						if(laminasi == "Tidak")
+							harga = 183250;
+						else
+							harga = 309250;
+					}
 					else
-						harga = 356500;
+					{
+						if(laminasi == "Tidak")
+							harga = 356500;
+						else
+							harga = 608500;
+					}
 				}
 				else if(jumlah == '500 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 340000;
+					{
+						if(laminasi == "Tidak")
+							harga = 340000;
+						else
+							harga = 590000;
+					}
 					else
-						harga = 665000;
+					{
+						if(laminasi == "Tidak")
+							harga = 665000;
+						else
+							harga = 1165000;
+					}
 				}
 				else if(jumlah == '1000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 470000;
+					{
+						if(laminasi == "Tidak")
+							harga = 470000;
+						else
+							harga = 845000;
+					}
 					else
-						harga = 770000;
+					{
+						if(laminasi == "Tidak")
+							harga = 770000;
+						else
+							harga = 1520000;
+					}
 				}
 				else if(jumlah == '2000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 770000;
+					{
+						if(laminasi == "Tidak")
+							harga = 770000;
+						else
+							harga = 1520000;
+					}
 					else
-						harga = 1220000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1220000;
+						else
+							harga = 2720000;
+					}
 				}
 				else if(jumlah == '3000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1000000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1000000;
+						else
+							harga = 2125000;
+					}
 					else
-						harga = 1525000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1525000;
+						else
+							harga = 3775000;
+					}
 				}
 				else if(jumlah == '5000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1425000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1425000;
+						else
+							harga = 3300000;
+					}
 					else
-						harga = 2050000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2050000;
+						else
+							harga = 5800000;
+					}
 				}
 			}
-			else if(jenis_kertas == 10) // art cartoon laminasi
-			{
-				if(jumlah == '100 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 170500;
-					else
-						harga = 333000;
-				}
-				else if(jumlah == '250 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 309250;
-					else
-						harga = 608500;
-				}
-				else if(jumlah == '500 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 590000;
-					else
-						harga = 1165000;
-				}
-				else if(jumlah == '1000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 845000;
-					else
-						harga = 1520000;
-				}
-				else if(jumlah == '2000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1520000;
-					else
-						harga = 2720000;
-				}
-				else if(jumlah == '3000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 2125000;
-					else
-						harga = 3775000;
-				}
-				else if(jumlah == '5000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 3300000;
-					else
-						harga = 5800000;
-				}
-			}
+			
 			else if(jenis_kertas == 11) // art cartoon 260gr
 			{
 				if(jumlah == '100 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 100500;
+					{
+						if(laminasi == "Tidak")
+							harga = 100500;
+						else
+							harga = 175500;
+					}
 					else
-						harga = 193000;
+					{
+						if(laminasi == "Tidak")
+							harga = 193000;
+						else
+							harga = 343000;
+					}
 				}
 				else if(jumlah == '250 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 189550;
+					{
+						if(laminasi == "Tidak")
+							harga = 189550;
+						else
+							harga = 315550;
+					}
 					else
-						harga = 369100;
+					{
+						if(laminasi == "Tidak")
+							harga = 369100;
+						else
+							harga = 621100;
+					}
 				}
 				else if(jumlah == '500 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 352500;
+					{
+						if(laminasi == "Tidak")
+							harga = 352500;
+						else
+							harga = 602500;
+					}
 					else
-						harga = 690000;
+					{
+						if(laminasi == "Tidak")
+							harga = 690000;
+						else
+							harga = 1190000;
+					}
 				}
 				else if(jumlah == '1000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 570000;
+					{
+						if(laminasi == "Tidak")
+							harga = 570000;
+						else
+							harga = 945000;
+					}
 					else
-						harga = 945000;
+					{
+						if(laminasi == "Tidak")
+							harga = 945000;
+						else
+							harga = 1695000;
+					}
 				}
 				else if(jumlah == '2000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 945000;
+					{
+						if(laminasi == "Tidak")
+							harga = 945000;
+						else
+							harga = 1695000;
+					}
 					else
-						harga = 1520000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1520000;
+						else
+							harga = 3020000;
+					}
 				}
 				else if(jumlah == '3000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1262500;
+					{
+						if(laminasi == "Tidak")
+							harga = 1262500;
+						else
+							harga = 2387500;
+					}
 					else
-						harga = 1975000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1975000;
+						else
+							harga = 4225000;
+					}
 				}
 				else if(jumlah == '5000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1987500;
+					{
+						if(laminasi == "Tidak")
+							harga = 1987500;
+						else
+							harga = 3862500;
+					}
 					else
-						harga = 3050000;
+					{
+						if(laminasi == "Tidak")
+							harga = 3050000;
+						else
+							harga = 6800000;
+					}
 				}
 			}
-			else if(jenis_kertas == 12) // art cartoon 260gr laminasi
-			{
-				if(jumlah == '100 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 175500;
-					else
-						harga = 343000;
-				}
-				else if(jumlah == '250 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 315550;
-					else
-						harga = 621100;
-				}
-				else if(jumlah == '500 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 602500;
-					else
-						harga = 1190000;
-				}
-				else if(jumlah == '1000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 945000;
-					else
-						harga = 1695000;
-				}
-				else if(jumlah == '2000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1695000;
-					else
-						harga = 3020000;
-				}
-				else if(jumlah == '3000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 2387500;
-					else
-						harga = 4225000;
-				}
-				else if(jumlah == '5000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 3862500;
-					else
-						harga = 6800000;
-				}
-			}
+			
 	}
 	
 	function cek_a4()//harga kertas tipe A4
@@ -765,214 +851,254 @@
 				if(jumlah == '100 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 158000;
+					{
+						if(laminasi == "Tidak")
+							harga = 158000;
+						else
+							harga = 308000;
+					}
 					else
-						harga = 308000;
+					{
+						if(laminasi == "Tidak")
+							harga = 308000;
+						else
+							harga = 608000;
+					}
 				}
 				else if(jumlah == '250 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 340000;
+					{
+						if(laminasi == "Tidak")
+							harga = 340000;
+						else
+							harga = 590000;
+					}
 					else
-						harga = 665000;
+					{
+						if(laminasi == "Tidak")
+							harga = 665000;
+						else
+							harga = 1165000;
+					}
 				}
 				else if(jumlah == '500 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 470000;
+					{
+						if(laminasi == "Tidak")
+							harga = 470000;
+						else
+							harga = 845000;
+					}
 					else
-						harga = 770000;
+					{
+						if(laminasi == "Tidak")
+							harga = 770000;
+						else
+							harga = 1520000;
+					}
 				}
 				else if(jumlah == '1000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 770000;
+					{
+						if(laminasi == "Tidak")
+							harga = 770000;
+						else
+							harga = 1520000;
+					}
 					else
-						harga = 1220000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1220000;
+						else
+							harga = 2720000;
+					}
 				}
 				else if(jumlah == '2000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1325000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1325000;
+						else
+							harga = 2825000;
+					}
 					else
-						harga = 2025000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2025000;
+						else
+							harga = 5025000;
+					}
 				}
 				else if(jumlah == '3000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1700000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1700000;
+						else
+							harga = 3950000;
+					}
 					else
-						harga = 2450000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2450000;
+						else
+							harga = 6950000;
+					}
 				}
 				else if(jumlah == '5000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 2800000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2800000;
+						else
+							harga = 6550000;
+					}
 					else
-						harga = 4050000;
+					{
+						if(laminasi == "Tidak")
+							harga = 4050000;
+						else
+							harga = 11550000;
+					}
 				}
 			}
-			else if(jenis_kertas == 10) // art cartoon laminasi
-			{
-				if(jumlah == '100 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 308000;
-					else
-						harga = 608000;
-				}
-				else if(jumlah == '250 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 590000;
-					else
-						harga = 1165000;
-				}
-				else if(jumlah == '500 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 845000;
-					else
-						harga = 1520000;
-				}
-				else if(jumlah == '1000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1520000;
-					else
-						harga = 2720000;
-				}
-				else if(jumlah == '2000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 2825000;
-					else
-						harga = 5025000;
-				}
-				else if(jumlah == '3000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 3950000;
-					else
-						harga = 6950000;
-				}
-				else if(jumlah == '5000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 6550000;
-					else
-						harga = 11550000;
-				}
-			}
+			
 			else if(jenis_kertas == 11) // art cartoon 260gr
 			{
 				if(jumlah == '100 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 168000;
+					{
+						if(laminasi == "Tidak")
+							harga = 168000;
+						else
+							harga = 318000;
+					}
 					else
-						harga = 328000;
+					{
+						if(laminasi == "Tidak")
+							harga = 328000;
+						else
+							harga = 628000;
+					}
 				}
 				else if(jumlah == '250 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 352500;
+					{
+						if(laminasi == "Tidak")
+							harga = 352500;
+						else
+							harga = 602500;
+					}
 					else
-						harga = 690000;
+					{
+						if(laminasi == "Tidak")
+							harga = 690000;
+						else
+							harga = 1190000;
+					}
 				}
 				else if(jumlah == '500 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 570000;
+					{
+						if(laminasi == "Tidak")
+							harga = 570000;
+						else
+							harga = 945000;
+					}
 					else
-						harga = 945000;
+					{
+						if(laminasi == "Tidak")
+							harga = 945000;
+						else
+							harga = 1695000;
+					}
 				}
 				else if(jumlah == '1000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 945000;
+					{
+						if(laminasi == "Tidak")
+							harga = 945000;
+						else
+							harga = 1695000;
+					}
 					else
-						harga = 1520000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1520000;
+						else
+							harga = 3020000;
+					}
 				}
 				else if(jumlah == '2000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 1675000;
+					{
+						if(laminasi == "Tidak")
+							harga = 1675000;
+						else
+							harga = 3175000;
+					}
 					else
-						harga = 2625000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2625000;
+						else
+							harga = 5625000;
+					}
 				}
 				else if(jumlah == '3000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 2375000;
+					{
+						if(laminasi == "Tidak")
+							harga = 2375000;
+						else
+							harga = 4625000;
+					}
 					else
-						harga = 3650000;
+					{
+						if(laminasi == "Tidak")
+							harga = 3650000;
+						else
+							harga = 8150000;
+					}
 				}
 				else if(jumlah == '5000 pcs')
 				{
 					if(sisi_cetak == 1)
-						harga = 3925000;
+					{
+						if(laminasi == "Tidak")
+							harga = 3925000;
+						else
+							harga = 7675000;
+					}
 					else
-						harga = 6050000;
+					{
+						if(laminasi == "Tidak")
+							harga = 6050000;
+						else
+							harga = 13550000;
+					}
 				}
 			}
-			else if(jenis_kertas == 12) // art cartoon 260gr laminasi
-			{
-				if(jumlah == '100 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 318000;
-					else
-						harga = 628000;
-				}
-				else if(jumlah == '250 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 602500;
-					else
-						harga = 1190000;
-				}
-				else if(jumlah == '500 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 945000;
-					else
-						harga = 1695000;
-				}
-				else if(jumlah == '1000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 1695000;
-					else
-						harga = 3020000;
-				}
-				else if(jumlah == '2000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 3175000;
-					else
-						harga = 5625000;
-				}
-				else if(jumlah == '3000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 4625000;
-					else
-						harga = 8150000;
-				}
-				else if(jumlah == '5000 pcs')
-				{
-					if(sisi_cetak == 1)
-						harga = 7675000;
-					else
-						harga = 13550000;
-				}
-			}
+			
 	}
 	
 	function cek_harga()
 	{
+		cek_laminasi();
 		ukuran = $("#ukuran").val();
+		laminasi = $("#laminasi").val();
 		jenis_kertas = $("#jenis_kertas").val();
 		sisi_cetak = $("#sisi_cetak").val();
 		tambahan_ket = $("#tambahan_ket").val();
@@ -1071,6 +1197,14 @@
 								?>        
 							</select>
 							<span class="warning"><?php echo form_error('jenis_kertas'); ?> </span>
+					</div>
+					<div class="items">
+						<label>Laminasi</label>
+						<select name="laminasi" onchange="cek_harga(this)" id="laminasi">
+							<option <?php echo set_select('laminasi', 'Ya'); ?> value="Ya">Ya</option>  
+							<option <?php echo set_select('laminasi', 'Tidak'); ?> value="Tidak">Tidak</option>  
+						</select> 
+						<span class="warning"><?php echo form_error('jumlah'); ?> </span>
 					</div>
 					<div class="items">
 						<label>Sisi Cetak</label>

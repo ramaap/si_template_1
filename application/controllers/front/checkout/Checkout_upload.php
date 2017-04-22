@@ -59,6 +59,7 @@ class checkout_upload extends CI_Controller {
 					'user_id' => $this->session->userdata('user_customer_id'),
 					'foto_front' => $nm_file_front,
 					'foto_back' => $nm_file_back,
+					'laminasi' => $this->session->userdata("laminasi"),
 					'nama' => $this->session->userdata("nama"),
 					'ukuran' => $this->session->userdata("ukuran"),
 					'jenis_kertas' => $this->session->userdata("jenis_kertas"),

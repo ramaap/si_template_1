@@ -256,7 +256,7 @@
 									<span>: <?php echo $val->jumlah; ?></span>
 								</li>
 								<li>
-									 <a title="Hapus Data" id="datamodel_<?php echo $val->cart_id; ?>" value="<?php echo $val->cart_id; ?>"  onclick="deleted(<?php echo $val->cart_id; ?>)">hapus</a>
+									 <a title="Hapus Data" href="#" id="datamodel_<?php echo $val->cart_id; ?>" value="<?php echo $val->cart_id; ?>"  onclick="deleted(<?php echo $val->cart_id; ?>)">hapus</a>
 								</li>
 							</ul>
 						</div>

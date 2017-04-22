@@ -5,6 +5,13 @@
     <br/>
     <div class="pdiv">
         <?php echo form_open('data/konfirmasi/update_status', 'id="form_produk"'); ?>	
+		
+		<div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9"> 
+			 <img width="50%" id="prev" name="prev" src='' />
+            </div> 
+        </div> 
 		<div class="row">
             <div class="col-md-3">Status Konfirmasi</div>
             <div class="col-md-9">  

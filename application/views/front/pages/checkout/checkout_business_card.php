@@ -24,7 +24,9 @@
 	
 	function cek_harga()
 	{
+		cek_laminasi();
 		jenis_kertas = $("#jenis_kertas").val();
+		laminasi = $("#laminasi").val();
 		sisi_cetak = $("#sisi_cetak").val();
 		tambahan_ket = $("#tambahan_ket").val();
 		jumlah = $("#jumlah").val();
@@ -35,47 +37,53 @@
 			if(jumlah == '1-5 Box')
 			{
 				if(sisi_cetak == 1)
-					harga = 18000;
+				{
+					if(laminasi == "Tidak")
+						harga = 18000;
+					else
+						harga = 30000;		
+				}
 				else
-					harga = 36000;
+				{
+					if(laminasi == "Tidak")
+						harga = 36000;
+					else
+						harga = 60000;
+				}
 			}
 			else if(jumlah == '6-9 Box')
 			{
 				if(sisi_cetak == 1)
-					harga = 15000;
+				{
+					if(laminasi == "Tidak")
+						harga = 15000;
+					else
+						harga = 27000;
+				}
 				else
-					harga = 30000;
+				{
+					if(laminasi == "Tidak")
+						harga = 30000;
+					else
+						harga = 54000;
+				}
 			}
 			else
 			{
 				if(sisi_cetak == 1)
-					harga = 13000;
+				{
+					if(laminasi == "Tidak")
+						harga = 13000;
+					else
+						harga = 25000;
+				}
 				else
-					harga = 26000;
-			}
-		}
-		else if(jenis_kertas == 2)// art carton laminasi
-		{
-			if(jumlah == '1-5 Box')
-			{
-				if(sisi_cetak == 1)
-					harga = 30000;
-				else
-					harga = 60000;
-			}
-			else if(jumlah == '6-9 Box')
-			{
-				if(sisi_cetak == 1)
-					harga = 27000;
-				else
-					harga = 54000;
-			}
-			else
-			{
-				if(sisi_cetak == 1)
-					harga = 25000;
-				else
-					harga = 50000;
+				{
+					if(laminasi == "Tidak")
+						harga = 26000;
+					else
+						harga = 50000;
+				}
 			}
 		}
 		else if(jenis_kertas == 3)// coronado
@@ -107,47 +115,53 @@
 			if(jumlah == '1-5 Box')
 			{
 				if(sisi_cetak == 1)
-					harga = 40000;
+				{
+					if(laminasi == "Tidak")
+						harga = 40000;
+					else
+						harga = 52000;
+				}
 				else
-					harga = 80000;
+				{
+					if(laminasi == "Tidak")
+						harga = 80000;
+					else
+						harga = 104000;
+				}
 			}
 			else if(jumlah == '6-9 Box')
 			{
 				if(sisi_cetak == 1)
-					harga = 38000;
+				{
+					if(laminasi == "Tidak")
+						harga = 38000;
+					else
+						harga = 50000;
+				}
 				else
-					harga = 76000;
+				{
+					if(laminasi == "Tidak")
+						harga = 76000;
+					else
+						harga = 100000;
+				}
 			}
 			else
 			{
 				if(sisi_cetak == 1)
-					harga = 36000;
+				{
+					if(laminasi == "Tidak")
+						harga = 36000;
+					else
+						harga = 48000;
+				}
 				else
-					harga = 72000;
-			}
-		}
-		else if(jenis_kertas == 5) // cougar opaque laminasi
-		{
-			if(jumlah == '1-5 Box')
-			{
-				if(sisi_cetak == 1)
-					harga = 52000;
-				else
-					harga = 104000;
-			}
-			else if(jumlah == '6-9 Box')
-			{
-				if(sisi_cetak == 1)
-					harga = 50000;
-				else
-					harga = 100000;
-			}
-			else
-			{
-				if(sisi_cetak == 1)
-					harga = 48000;
-				else
-					harga = 96000;
+				{
+					if(laminasi == "Tidak")
+						harga = 72000;
+					else
+						harga = 96000;
+				}
 			}
 		}
 		else if(jenis_kertas == 6) //jasmine gold dust
@@ -180,11 +194,22 @@
 			tambahan = 5000;
 			harga = harga+tambahan;
 		}
+		
 		// alert(harga);
 		$('#total').html(currency_format(harga));
 		$('#harga').val(harga_satuan);
 		$('#harga_tambahan').val(tambahan);
 		$('#total_db').val(harga);
+	}
+	function cek_laminasi(){
+		jenis_kertas = $("#jenis_kertas").val();
+		if(jenis_kertas == 3 || jenis_kertas == 6)
+		{
+			$('#laminasi').val("Tidak");
+			document.getElementById("laminasi").disabled=true;
+		}
+		else
+			document.getElementById("laminasi").disabled=false;
 	}
 	
 	function check_form(){
@@ -271,6 +296,15 @@
 								?>        
 							</select>
 							<span class="warning"><?php echo form_error('jenis_kertas'); ?> </span>
+					</div>
+					
+					<div class="items">
+						<label>Laminasi</label>
+						<select name="laminasi" onchange="cek_harga(this)" id="laminasi">
+							<option <?php echo set_select('laminasi', 'Ya'); ?> value="Ya">Ya</option>  
+							<option <?php echo set_select('laminasi', 'Tidak'); ?> value="Tidak">Tidak</option>  
+						</select> 
+						<span class="warning"><?php echo form_error('jumlah'); ?> </span>
 					</div>
 					<div class="items">
 						<label>Sisi Cetak</label>
