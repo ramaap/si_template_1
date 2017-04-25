@@ -8,19 +8,20 @@ li{
     list-style: none;
 }
 .stages{
-    border-top: 3px solid black;
+    border-top: 3px solid #ccc;
     max-width: 750px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 120px;
 }
 .stage .round{    
-    padding: 16px 27px;
-    background: grey;
+    padding: 2px 13px;
+    background: #ccc;
     border-radius: 50px;
     color: #00003f;
     text-decoration: none;
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: bold;
 }
 body.checkout-1 .main.container,
 body.checkout-2 .main.container,
@@ -40,6 +41,9 @@ body.checkout-3 .stage.three .round{
 body.checkout-4 .stage.four .round{
     background: #ffcf3e;
 }
+body.checkout-5 .stage.five .round{
+    background: #ffcf3e;
+}
 .stage a:hover .round,
 a:focus, a:hover{
     text-decoration: none !important;
@@ -48,10 +52,10 @@ a:focus, a:hover{
 .stage {
     float: left;
     position: absolute;
-    top: -31px;
+    top: -25px;
 }
 .stage .round-container{
-    width: 75px;
+    width: 45px;
     margin: 0 auto;
 }
 .stage >span{
@@ -63,15 +67,16 @@ a:focus, a:hover{
     left: -20px;
 }
 .stage.two{
-    left: 210px;
+    left: 19%;
 }
 .stage.three{
-    right: 190px;
+    left: 46%;
 }
 .stage.four{
-    right: -20px;
+    right: 15%;
 }
 .stage.five{
+    right: -10px;
 }
 .detail-product .image{
     float: left;
@@ -109,6 +114,26 @@ a:focus, a:hover{
 .detail-product .detail button span{
     font-weight: bold;
 }
+
+/*upload*/
+.detail-product{
+    border: 2px solid #fece3e;    
+    position: relative;
+}
+.detail-product > .button{
+    position: absolute;
+    bottom: -25px;
+    right: 4%;
+}
+.detail-product > .button button{
+    background: #fece3e;
+    border: 0px;
+    padding: 10px 20px;
+}
+.detail-product > .button button span{
+    font-size: 20px;
+    font-weight: bold;
+}
 .detail-product .detail .upload {
     margin: 10px;
 }
@@ -120,6 +145,108 @@ a:focus, a:hover{
     float: left;
     min-width: 130px;
 }
+.detail-product #slider #imgInpfront,
+.detail-product #slider #imgInpback{
+    display: none;
+    margin: 0 auto;
+}
+.detail-product #slider img{
+    width: 100%;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 300px;
+}
+#slider ul li .item{
+    width: 75%;
+    margin: 0 auto;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+
+/*checkoout design*/
+.checkout-2 .preview{
+    background: #ccc;    
+    overflow: hidden;
+}
+.checkout-2 .preview .sides{
+    width: 46%;
+    float: left;
+    margin: 20px;
+}
+.checkout-2 .preview .sides img{
+    max-width: 200px;
+    max-height: 110px;
+    margin: 20px;
+    position: relative;
+    background: white;
+    width: 200px;
+    height: 110px;
+}
+.checkout-2 .preview .sides .front,
+.checkout-2 .preview .sides .back{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
 
 /*checkout-pembayaran*/
 .cart-checkout .lanjutkan{

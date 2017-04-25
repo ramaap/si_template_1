@@ -1144,7 +1144,7 @@
 						<span class="round">2</span>
 					</a>
 				</div>
-				<span>Pembayaran</span>
+				<span>Upload Desain</span>
 			</div>
 			<div class="stage three">
 				<div class="round-container">
@@ -1152,12 +1152,20 @@
 						<span class="round">3</span>
 					</a>
 				</div>
-				<span>Konfirmasi Pembayaran</span>
+				<span>Pembayaran</span>
 			</div>
 			<div class="stage four">
 				<div class="round-container">
 					<a href="#">
 						<span class="round">4</span>
+					</a>
+				</div>
+				<span>Konfirmasi Pembayaran</span>
+			</div>
+			<div class="stage five">
+				<div class="round-container">
+					<a href="#">
+						<span class="round">5</span>
 					</a>
 				</div>
 				<span>Selesai!</span>
