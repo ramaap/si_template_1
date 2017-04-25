@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-3">
+<body class="checkout-4">
 <?php $this->load->view('front/slice/menu'); ?>
 
 	<div class="main container">
-		<div class="stages">
-			<div class="stage one">
+		<div class="stage one">
+			<div class="round-container">
+				<a href="#">
+					<span class="round">1</span>
+				</a>
+			</div>
+			<span>Pilih Produk</span>
+		</div>
+		<div class="stage two">
+			<div class="round-container">
+				<a href="#">
+					<span class="round">5</span>
+				</a>
+			</div>
+			<span>Upload Desain</span>
+		</div>
+		<div class="stage three">
+			<div class="round-container">
+				<a href="#">
+					<span class="round">2</span>
+				</a>
+			</div>
+			<span>Pembayaran</span>
+		</div>
+		<div class="stage four">
+			<div class="round-container">
+				<a href="#">
+					<span class="round">3</span>
+				</a>
+			</div>
+			<span>Konfirmasi Pembayaran</span>
+		</div>
+		<div class="stage five">
+			<div class="round-container">
+				<a href="#">
+					<span class="round">4</span>
+				</a>
+			</div>
+			<span>Selesai!</span>
+		</div>
+			<div class="clear"></div>
+					<div class="stage one">
 				<div class="round-container">
 					<a href="#">
 						<span class="round">1</span>
@@ -20,7 +60,7 @@
 						<span class="round">2</span>
 					</a>
 				</div>
-				<span>Pembayaran</span>
+				<span>Upload Desain</span>
 			</div>
 			<div class="stage three">
 				<div class="round-container">
@@ -28,7 +68,7 @@
 						<span class="round">3</span>
 					</a>
 				</div>
-				<span>Konfirmasi Pembayaran</span>
+				<span>Pembayaran</span>
 			</div>
 			<div class="stage four">
 				<div class="round-container">
@@ -36,10 +76,16 @@
 						<span class="round">4</span>
 					</a>
 				</div>
-				<span>Selesai!</span>
+				<span>Konfirmasi Pembayaran</span>
 			</div>
-			<div class="clear"></div>
-		</div>
+			<div class="stage five">
+				<div class="round-container">
+					<a href="#">
+						<span class="round">5</span>
+					</a>
+				</div>
+				<span>Selesai!</span>
+			</div></div>
 		<div class="cart-checkout">
 				<div class="head">
 					<span>Your Cart</span>
