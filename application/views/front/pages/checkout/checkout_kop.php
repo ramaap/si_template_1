@@ -1070,7 +1070,7 @@
 							$query = "SELECT * FROM jenis_kertas where tipe=2 and is_delete=0 ORDER BY id_kertas asc ";
 							$result = mysql_query($query);
 							?>
-							<select id="jenis_kertas" onchange="cek_harga(this)" name="jenis_kertas"> 
+							<select id="jenis_kertas" onchange="cek_harga(this)" name="jenis_kertas" required> 
 								<?php
 								echo "<option value='0'>Silahkan Pilih</option>";
 								while ($row = mysql_fetch_array($result)) {
