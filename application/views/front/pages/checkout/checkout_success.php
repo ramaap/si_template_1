@@ -125,7 +125,7 @@
 						</span>
 					</li>
 					<li>
-						<img src="../images/index/pixaprint/2.png" />
+						<img src="<?php echo base_url(); ?>include/front/images/index/pixaprint/2.png" />
 						<h2>Kartu Nama</h2>
 						<span>
 							<p>Mulai dari IDR1600/box</p>

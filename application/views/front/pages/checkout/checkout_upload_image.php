@@ -152,10 +152,12 @@
 				<div class="images sides">
 					<div class="front">
 						<img id="front" src="#" alt="your image" />
+						<br/>
 						<span>Front</span>
 					</div>
 					<div class="back">
 						<img id="back" src="#" alt="your image" />
+						<br/>
 						<span>Back</span>
 					</div>
 				</div>
@@ -242,11 +244,6 @@
 		$( "#imageback" ).click(function() {
 		  $( "#imgInpback" ).click();
 		});
-
-	    $(".detail-product .control img").click(function() {
-	        $(".detail-product .upload .item").addClass("active");
-	        $(".detail-product .upload .item").siblings().removeClass("active");
-	    });
 	</script>
         <?php $this->load->view('front/slice/footer'); ?>
 </body>

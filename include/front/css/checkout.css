@@ -246,6 +246,13 @@ a.control_next {
     float: left;
     text-align: center;
 }
+.checkout-2 #dialog.lnv-dialog-confirm .lnv-dialog{
+    max-width: 480px;
+}
+.checkout-2 #dialog.lnv-dialog-confirm .lnv-dialog .lnv-dialog-bd{
+    text-align: center;
+}
+
 
 
 /*checkout-pembayaran*/
@@ -258,8 +265,15 @@ a.control_next {
     bottom: -16px;
     right: 13px;
 }
+.checkout-3 .cart-checkout .cart-container .lanjutkan{
+    bottom: 95px;
+}
 .cart-checkout .pembayaran .lanjutkan{
     width: 180px;
+}
+.cart-checkout .shipping,
+.cart-checkout .billing{
+    display: none;
 }
 .cart-checkout .login,
 .cart-checkout .cart-container,
@@ -281,8 +295,44 @@ a.control_next {
     color: white;
 }
 .cart-checkout .cart-container{
-    max-width: 510px;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    border: 0px;
+    margin-top: 40px;
+}
+.cart-checkout .cart-container .itemcontainer{
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.cart-checkout .cart-container .itemcontainer .image-preview{
+    width: 50%;
+    float: left;
+    padding: 40px;    
+    text-align: center;
+}
+.cart-checkout .cart-container .itemcontainer .image-preview span{
+    font-family: 'harmonia-bold';
+    margin-bottom: 20px;
+}
+.cart-checkout .cart-container .itemcontainer .image-preview img{
+    max-width: 426px;
+    max-height: 239px;
+    width: 100%;
+}
+.cart-checkout .cart-container .itemcontainer .items{
+    width: 50%;
+    float: right;
+    border: 1px solid #ffcf3e;
+    padding: 40px;   
+    position: relative;
+}
+.cart-checkout .cart-container .itemcontainer .items .detailed span.delete-item a span{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 4px 10px;
+    background: #ffcf3e;
 }
 .cart-checkout .cart-container label{
     min-width: 130px;
@@ -443,7 +493,26 @@ a.control_next {
 .cart-checkout .pembayaran .left,
 .cart-checkout .pembayaran .right{
     float: left;
-    width: 50%;
+    width: 48%;
+}
+.cart-checkout .pembayaran .left{
+    margin-right: 20px;
+}
+.cart-checkout .pembayaran .right .cart-container{
+    border: 1px solid #ffcf3e;
+    padding: 40px;
+    position: relative;
+    margin:0px;
+}
+.cart-checkout .pembayaran .right .cart-container img{
+    margin-bottom: 10px;
+}
+.cart-checkout .pembayaran .right .cart-container a{
+    text-decoration: underline !important;
+}
+.cart-checkout .pembayaran .right .cart-container > .total{
+    margin-top: 20px;
+
 }
 .cart-checkout .pembayaran .bank img{
     width: 20%;
@@ -471,129 +540,140 @@ a.control_next {
 }
 .cart-checkout .pembayaran .left .shipping-billing .left,
 .cart-checkout .pembayaran .left .shipping-billing .right{
-    width: 48%;
+    width: 47%;
     float: left;
 }
 
 /*start of checkout confirm payment*/
-body.checkout-3 .cart-checkout>.cart-container,
-body.checkout-3 .login,
-body.checkout-3 .shipping,
-body.checkout-3 .billing{
+body.checkout-4 .cart-checkout>.cart-container,
+body.checkout-4 .login,
+body.checkout-4 .shipping,
+body.checkout-4 .billing{
     padding: 0px;
     max-width: none;
     border: none;
 }
-body.checkout-3 .cart-checkout>.cart-container .container,
-body.checkout-3 .login .container,
-body.checkout-3 .shipping .container,
-body.checkout-3 .billing .container{
+body.checkout-4 .cart-checkout>.cart-container .container,
+body.checkout-4 .login .container,
+body.checkout-4 .shipping .container,
+body.checkout-4 .billing .container{
     border: 1px solid #ffcf3e;
     padding: 30px;
     max-width: 550px;
     float: right;
 }
-body.checkout-3 .cart-checkout .cart-container .left,
-body.checkout-3 .cart-checkout .cart-container .right,
-body.checkout-3 .cart-checkout .login .left,
-body.checkout-3 .cart-checkout .login .right{
+body.checkout-4 .cart-checkout .cart-container .left,
+body.checkout-4 .cart-checkout .cart-container .right,
+body.checkout-4 .cart-checkout .login .left,
+body.checkout-4 .cart-checkout .login .right{
     float: left;
     width: auto;
     margin-right: 20px;
 }
-body.checkout-3 .cart-checkout .cart-container .left,
-body.checkout-3 .cart-checkout .login .left{
+body.checkout-4 .cart-checkout .cart-container .left,
+body.checkout-4 .cart-checkout .login .left{
     min-width: 80px;
 }
 
-body.checkout-3 .cart-checkout .cart-container ul li label{
+body.checkout-4 .cart-checkout .cart-container ul li label{
     min-width: 77px;
 }
-body.checkout-3 .h2, h2{
+body.checkout-4 .h2, h2{
     font-size: 19px;
     text-transform: uppercase;
 }
-body.checkout-3 .cart-checkout .cart-container .left h2{
+body.checkout-4 .cart-checkout .cart-container .left h2{
     line-height: 44px;
 }
 
-body.checkout-3 .cart-checkout .login .right,
-body.checkout-3 .cart-checkout .login .left{
+body.checkout-4 .cart-checkout .login .right,
+body.checkout-4 .cart-checkout .login .left{
     padding: 0px;
 }
 
 /*success start*/
-body.checkout-4 h3,
-body.checkout-4 p{
-    text-align: center;
-}
-body.checkout-4 .bx-wrapper p{
+body.checkout-5 .bx-wrapper p{
     text-align: left;
 }
-body.checkout-4 .image div.image-container{
+body.checkout-5 .bx-wrapper .bx-loading{
+    display: none;
+}
+body.checkout-5 .cart-checkout{
+    text-align: center;
+}
+body.checkout-5 .image div.image-container{
     width: 610px;
     margin: 0 auto;
 }
-body.checkout-4 .image img{
+body.checkout-5 .image img{
     width: 100%;
 }
-body.checkout-4 .pembayaran{
+body.checkout-5 .pembayaran{
     margin-top: 40px;
-    padding: 0px;
 }
-body.checkout-4 .pembayaran .head{
+body.checkout-5 .pembayaran .head{
     border-bottom: 1px solid #ffcf3e;
     background: transparent;
 }
-body.checkout-4 .pembayaran .container{
+body.checkout-5 .pembayaran .container{
     padding:40px;
 }
-body.checkout-4 .pembayaran .container .left strong{
+body.checkout-5 .pembayaran .container .left strong{
     float: left;
     font-size: 35px;
     padding: 20px;
     padding-left: 150px;
 }
-body.checkout-4 .pembayaran .container .left p{
+body.checkout-5 .pembayaran .container .left p{
     float: right;
     line-height: 80px;
 }
-body.checkout-4 .pembayaran .container .right .bank{
+body.checkout-5 .pembayaran .container .right .bank{
     width: 158px;
     margin: 0 auto;
 }
-body.checkout-4 .pembayaran .container .right .bank img{
+body.checkout-5 .pembayaran .container .right .bank img{
     width: 100%;
 }
-body.checkout-4 .confirm-alert {
+body.checkout-5 .confirm-alert {
     width: 60%;
     margin: 0 auto;
     background: #385379;
     padding: 20px;
 }
-body.checkout-4 .confirm-alert p{
+body.checkout-5 .confirm-alert p{
     margin: 0px;
     color: white;
 }
-body.checkout-4 .etc .button-payed{
+body.checkout-5 .etc .button-payed{
     width: 172px;
     margin: 0 auto;
     margin-top: 25px;
 }
-body.checkout-4 .etc .button-payed span{
+body.checkout-5 .etc .button-payed span{
     padding: 10px 10px;
     background: #385379;
     color: white;
 }
-body.checkout-4 .etc .button-back{
+body.checkout-5 .etc .button-back{
     width: 148px;
     margin: 0 auto;
     margin-top: 25px;
 }
-body.checkout-4 .etc .button-back span{
+body.checkout-5 .etc .button-back span{
     padding: 10px 10px;
     background: #ffcf3e;
     color: rgb(96, 125, 139);
+}
+
+body.checkout-5 .bx-wrapper .bx-controls-direction .bx-next{
+    background-size: auto;
+    background-position: -43px 0px;
+    right: 20px;
+}
+body.checkout-5 .bx-wrapper .bxslider h2{
+    text-align: left;
+    margin-top: 10px;
 }
 
 /*responsive*/
@@ -603,7 +683,8 @@ body.checkout-4 .etc .button-back span{
     body.checkout-1 .main.container,
     body.checkout-2 .main.container,
     body.checkout-3 .main.container,
-    body.checkout-4 .main.container{
+    body.checkout-4 .main.container,
+    body.checkout-5 .main.container{
         margin-top: 0px;
     }
     .stages,
@@ -658,12 +739,134 @@ body.checkout-4 .etc .button-back span{
     .cart-checkout .login .left{
         width: 100%;
     }
+
+    body.checkout-1 .detail-product .detail #form_checkout h3,
+    body.checkout-1 .detail-product .detail #form_checkout p{
+        margin-left: 10px;
+    }
+
+
     /*checkout 2*/
+
+    body.checkout-2 #slider{
+        width: 100%;
+        height: 200px !important;
+    }
+    body.checkout-2 #slider .item img{
+        vertical-align: top;
+    }
+
+    body.checkout-2 #slider a.control_prev,
+    body.checkout-2 #slider a.control_next{
+        top: 9%;
+    }
+    .checkout-2 .preview .sides{
+        width: 100%;
+        float: none;
+        margin: 0px;    
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    body.checkout-2 .preview .sides .front, 
+    body.checkout-2 .preview .sides .back{
+        width: 100%;
+        float: none;
+    }
+    .checkout-2 .preview .sides img{
+        margin: 20px auto;
+    }
+    .checkout-2 #dialog.lnv-dialog-confirm .lnv-dialog{
+        max-width: 306px;
+    }
+
     .cart-checkout .cart-container {
         max-width: 100%;
         margin: 20px auto;
         width: 100%;
         padding: 20px;
+    }
+
+    /*cart / pembayaran*/
+    .checkout-3 .cart-checkout .cart-container .itemcontainer .image-preview,
+    .checkout-3 .cart-checkout .cart-container .itemcontainer .items{
+        width: 100%;
+    }
+    .checkout-3 .cart-checkout .cart-container .itemcontainer .image-preview{
+        margin-bottom: 20px;
+        padding: 0px;
+    }
+    .checkout-3 .cart-checkout .cart-container .lanjutkan{
+        bottom: 75px;
+    }
+    .cart-checkout .lanjutkan{
+        right: 33px;
+    }
+
+
+    /*konfirmasi pembayaran*/
+    body.checkout-4 .cart-checkout>.cart-container .container, 
+    body.checkout-4 .login .container, 
+    body.checkout-4 .shipping .container, 
+    body.checkout-4 .billing .container{
+        max-width: 100%;
+        width: 100%;
+    }
+    body.checkout-4 .cart-checkout .pembayaran .left .shipping-billing .left, 
+    body.checkout-4 .cart-checkout .pembayaran .left .shipping-billing .right{
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    body.checkout-4 .cart-checkout .pembayaran .left{
+        margin-bottom: 20px;
+    }
+    body.checkout-4 .cart-checkout .pembayaran .right .cart-container{
+        padding: 10px;
+    }
+    body.checkout-4 .cart-checkout .pembayaran .left, 
+    body.checkout-4 .cart-checkout .pembayaran .right{
+        width: 100%;
+    }
+    body.checkout-4 .cart-checkout .pembayaran .right .cart-container > .total{
+        text-align: left;
+    }
+
+
+    /*success*/
+    body.checkout-5 .image div.image-container{
+        width: 100%;
+    }
+    body.checkout-5 .pembayaran{
+        padding: 10px;
+    }
+    body.checkout-5 .pembayaran .container{
+        padding: 0px;
+    }
+    body.checkout-5 .pembayaran .container .left strong{
+        padding: 20px;
+        width: 100%;
+    }
+    body.checkout-5 .pembayaran .container .left p{
+        float: none;
+    }
+    body.checkout-5 .cart-checkout .pembayaran .right{
+        width: 100%;
+        height: auto !important;
+        margin-bottom: 20px;
+    }
+    body.checkout-5 .confirm-alert{
+        width: 100%;
+    }
+
+
+    .cart-checkout .pembayaran .left{
+        width: 100%;
+    }
+    .bx-wrapper .bx-controls-direction .bx-prev {
+        left: 10px;
+    }
+    .bx-wrapper .bx-controls-direction .bx-prev {
+        left: 10px;
     }
 }
 

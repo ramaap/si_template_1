@@ -5,50 +5,10 @@
 <?php $this->load->view('front/slice/menu'); ?>
 
 	<div class="main container">
-		<div class="stage one">
-			<div class="round-container">
-				<a href="#">
-					<span class="round">1</span>
-				</a>
-			</div>
-			<span>Pilih Produk</span>
-		</div>
-		<div class="stage two">
-			<div class="round-container">
-				<a href="#">
-					<span class="round">5</span>
-				</a>
-			</div>
-			<span>Upload Desain</span>
-		</div>
-		<div class="stage three">
-			<div class="round-container">
-				<a href="#">
-					<span class="round">2</span>
-				</a>
-			</div>
-			<span>Pembayaran</span>
-		</div>
-		<div class="stage four">
-			<div class="round-container">
-				<a href="#">
-					<span class="round">3</span>
-				</a>
-			</div>
-			<span>Konfirmasi Pembayaran</span>
-		</div>
-		<div class="stage five">
-			<div class="round-container">
-				<a href="#">
-					<span class="round">4</span>
-				</a>
-			</div>
-			<span>Selesai!</span>
-		</div>
-			<div class="clear"></div>
-					<div class="stage one">
+		<div class="stages">
+			<div class="stage one">
 				<div class="round-container">
-					<a href="#">
+					<a>
 						<span class="round">1</span>
 					</a>
 				</div>
@@ -56,7 +16,7 @@
 			</div>
 			<div class="stage two">
 				<div class="round-container">
-					<a href="#">
+					<a href="/front/checkout/checkout_upload_image">
 						<span class="round">2</span>
 					</a>
 				</div>
@@ -64,7 +24,7 @@
 			</div>
 			<div class="stage three">
 				<div class="round-container">
-					<a href="#">
+					<a href="/front/checkout/checkout_pembayaran">
 						<span class="round">3</span>
 					</a>
 				</div>
@@ -72,7 +32,7 @@
 			</div>
 			<div class="stage four">
 				<div class="round-container">
-					<a href="#">
+					<a>
 						<span class="round">4</span>
 					</a>
 				</div>
@@ -80,12 +40,14 @@
 			</div>
 			<div class="stage five">
 				<div class="round-container">
-					<a href="#">
+					<a>
 						<span class="round">5</span>
 					</a>
 				</div>
 				<span>Selesai!</span>
-			</div></div>
+			</div>
+			<div class="clear"></div>
+		</div>
 		<div class="cart-checkout">
 				<div class="head">
 					<span>Your Cart</span>
@@ -114,18 +76,82 @@
 						</div>
 					</div>
 					<div class="clear"></div>
+					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+						<div class="lanjutkan">
+							<span>Lihat</span>
+						</div>
+					</a>
 				</div>
+
+				<div class="cart-container">
+					<div class="container">
+						<div class="left">
+							<h2>Login</h2>
+						</div>
+						<div class="right" style="line-height:44px;">
+							<p>Halo, <?php echo $this->session->userdata('user_name')?>!</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+						<div class="lanjutkan">
+							<span>Lihat</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="cart-container">
+					<div class="container">
+						<div>
+							<h2>Informasi Pengiriman</h2>
+						</div>
+						<div>
+							<p><?php echo $pengiriman->customer_alamat; ?>, <?php echo $pengiriman->customer_telp; ?></p>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+						<div class="lanjutkan">
+							<span>Lihat</span>
+						</div>
+					</a>
+				</div>
+
+
+				<div class="cart-container">
+					<div class="container">
+						<div>
+							<h2>Informasi Penagihan</h2>
+						</div>
+						<div>
+							<p><?php echo $penagihan->customer_alamat; ?>, <?php echo $penagihan->customer_telp; ?></p>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+						<div class="lanjutkan">
+							<span>Lihat</span>
+						</div>
+					</a>
+				</div>
+
+
+
+
 				<div class="pembayaran">
 					<div class="left">
 						<h2>Pembayaran</h2>
+						<br/>
 						<p>
 							Mohon maaf untuk saat ini Kami hanya dapat melayani melayani pembayaran melalui transfer Bank.
 						</p>
+						<br/>
 						<p>
 							Mohon pembayaran jumlah sesuai yang tertera pada informasi Total pembayaran.<br/>
 							Pembayaran dan konfirmasi transfer haru dilakukan dalam waktu 2 jam<br/>
 							atau pesanan akan otomatis dibatalkan.
 						</p>
+						<br/>
 						<p>
 							Transfer dapat dilakukan melalui 
 						</p>
@@ -175,44 +201,48 @@
 					</div>
 					<div class="right">
 				<div class="cart-container">
+				<img src="<?php echo base_url(); ?>include/front/images/checkout/pembayaran.jpg">
+				<span>
+					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">Perlihatkan detail keranjang</a>
+				</span>
 				<?php
 				foreach($cart as $val)
 				{
 				?>
-					<center><img style="width:400px;height:200px;" src="<?php echo base_url(); ?>include/order/<?php echo $val->foto_front; ?>"></center>
-					<div class="items">
-						<h3 class="item-name"><?php echo $val->nama; ?></h3>
-						<div class="detailed">
-							<ul>
-								<li>
-									<label>Ukuran</label>
-									<span>:<?php echo $val->ukuran; ?></span>
-								</li>
-								<li>
-									<label>Tipe Kertas</label>
-									<span>: <?php echo $val->kertas_nama; ?></span>
-								</li>
-								<li>
-									<label>Sisi Cetak</label>
-									<span>: <?php echo $val->sisi_cetak; ?> Muka</span>
-								</li>
-								<li>
-									<label>Finishing</label>
-									<span>: <?php echo $val->tambahan_ket; ?></span>
-								</li>
-								<li>
-									<label>Jumlah Order</label>
-									<span>: <?php echo $val->jumlah; ?></span>
-								</li>
-							</ul>
+					<div class="item-container">
+						<div class="items">
+							<h3 class="item-name"><?php echo $val->nama; ?></h3>
+							<div class="detailed">
+								<ul>
+									<li>
+										<label>Ukuran</label>
+										<span>:<?php echo $val->ukuran; ?></span>
+									</li>
+									<li>
+										<label>Tipe Kertas</label>
+										<span>: <?php echo $val->kertas_nama; ?></span>
+									</li>
+									<li>
+										<label>Sisi Cetak</label>
+										<span>: <?php echo $val->sisi_cetak; ?> Muka</span>
+									</li>
+									<li>
+										<label>Finishing</label>
+										<span>: <?php echo $val->tambahan_ket; ?></span>
+									</li>
+									<li>
+										<label>Jumlah Order</label>
+										<span>: <?php echo $val->jumlah; ?></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="separator"></div>
+						<div class="total">
+							<label>Total</label>
+							<strong>IDR <?php echo number_format($val->harga_total,0,",","."); ?>,-</strong>
 						</div>
 					</div>
-					<div class="separator"></div>
-					<div class="total">
-						<label>Total</label>
-						<strong>IDR <?php echo number_format($val->harga_total,0,",","."); ?>,-</strong>
-					</div>
-					<br/>
 				<?php } ?>
 					<div class="total" align="right">
 						<label>TOTAL ORDER : </label>

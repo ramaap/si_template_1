@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-2">
+<body class="checkout-3">
 <?php $this->load->view('front/slice/menu'); ?>
 
  <script type="text/javascript">
@@ -188,7 +188,7 @@
 		<div class="stages">
 			<div class="stage one">
 				<div class="round-container">
-					<a href="#">
+					<a>
 						<span class="round">1</span>
 					</a>
 				</div>
@@ -196,7 +196,7 @@
 			</div>
 			<div class="stage two">
 				<div class="round-container">
-					<a href="#">
+					<a href="/front/checkout/checkout_upload_image">
 						<span class="round">2</span>
 					</a>
 				</div>
@@ -204,7 +204,7 @@
 			</div>
 			<div class="stage three">
 				<div class="round-container">
-					<a href="#">
+					<a href="/front/checkout/checkout_pembayaran">
 						<span class="round">3</span>
 					</a>
 				</div>
@@ -212,7 +212,7 @@
 			</div>
 			<div class="stage four">
 				<div class="round-container">
-					<a href="#">
+					<a>
 						<span class="round">4</span>
 					</a>
 				</div>
@@ -220,7 +220,7 @@
 			</div>
 			<div class="stage five">
 				<div class="round-container">
-					<a href="#">
+					<a>
 						<span class="round">5</span>
 					</a>
 				</div>
@@ -238,43 +238,60 @@
 				foreach($cart as $val)
 				{
 				?>
-					<center><img style="width:400px;height:200px;" src="<?php echo base_url(); ?>include/order/<?php echo $val->foto_front; ?>"></center>
-					<div class="items">
-						<h3 class="item-name"><?php echo $val->nama; ?></h3>
-						<div class="detailed">
-							<ul>
-								<li>
-									<label>Ukuran</label>
-									<span>:<?php echo $val->ukuran; ?></span>
-								</li>
-								<li>
-									<label>Tipe Kertas</label>
-									<span>: <?php echo $val->kertas_nama; ?></span>
-								</li>
-								<li>
-									<label>Sisi Cetak</label>
-									<span>: <?php echo $val->sisi_cetak; ?> Muka</span>
-								</li>
-								<li>
-									<label>Finishing</label>
-									<span>: <?php echo $val->tambahan_ket; ?></span>
-								</li>
-								<li>
-									<label>Jumlah Order</label>
-									<span>: <?php echo $val->jumlah; ?></span>
-								</li>
-								<li>
-									 <a title="Hapus Data" href="#" id="datamodel_<?php echo $val->cart_id; ?>" value="<?php echo $val->cart_id; ?>"  onclick="deleted(<?php echo $val->cart_id; ?>)">hapus</a>
-								</li>
-							</ul>
+					<div class="itemcontainer">
+						<div class="image-preview">
+							<img src="<?php echo base_url(); ?>include/order/<?php echo $val->foto_front; ?>">
+							<br/>
+							<span>Front</span>
+							<br/>
+							<br/>
+							<img src="<?php echo base_url(); ?>include/order/<?php echo $val->foto_back; ?>">
+							<br/>
+							<span>Back</span>
 						</div>
+						
+						<div class="items">
+							<img src="<?php echo base_url(); ?>include/front/images/checkout/pembayaran.jpg">
+							<h3 class="item-name"><?php echo $val->nama; ?></h3>
+							<div class="detailed">
+								<ul>
+									<li>
+										<label>Ukuran</label>
+										<span>:<?php echo $val->ukuran; ?></span>
+									</li>
+									<li>
+										<label>Tipe Kertas</label>
+										<span>: <?php echo $val->kertas_nama; ?></span>
+									</li>
+									<li>
+										<label>Sisi Cetak</label>
+										<span>: <?php echo $val->sisi_cetak; ?> Muka</span>
+									</li>
+									<li>
+										<label>Finishing</label>
+										<span>: <?php echo $val->tambahan_ket; ?></span>
+									</li>
+									<li>
+										<label>Jumlah Order</label>
+										<span>: <?php echo $val->jumlah; ?></span>
+									</li>
+									<span class="delete-item">
+										 <a title="Hapus Data" href="#" id="datamodel_<?php echo $val->cart_id; ?>" value="<?php echo $val->cart_id; ?>"  onclick="deleted(<?php echo $val->cart_id; ?>)">
+										 	<span>
+												X
+										 	</span>
+										 </a>
+									</span>
+								</ul>
+							</div>
+							<div class="separator"></div>
+							<div class="total">
+								<label>Total</label>
+								<strong>IDR <?php echo number_format($val->harga_total,0,",","."); ?>,-</strong>
+							</div>
+						</div>
+						<br/>
 					</div>
-					<div class="separator"></div>
-					<div class="total">
-						<label>Total</label>
-						<strong>IDR <?php echo number_format($val->harga_total,0,",","."); ?>,-</strong>
-					</div>
-					<br/>
 				<?php } ?>
 					<div class="total" align="right">
 						<label>TOTAL ORDER : </label>
@@ -360,8 +377,9 @@
 					</div>
 				</div>
 				<div class="billing">
-					<h2>Informasi Pengiriman</h2>
-					<input class="checkbox" type="checkbox" onclick="main_checkbox(this)" id="cekbox" >Sama dengan Shipping Address<br>
+					<h2>Informasi Tagihan</h2>
+					<input class="checkbox" type="checkbox" onclick="main_checkbox(this)" id="cekbox" >
+					<label for="cekbox">Sama dengan Shipping Address</label>
 						<ul>
 							<li>
 								<label>Nama Lengkap</label>
@@ -436,6 +454,17 @@
 		return $(this).height();
 		}).get());
 		})());
+    </script>
+
+    <script type="text/javascript">
+		$(".cart-checkout .cart-container .lanjutkan").click(function(){
+			$('.cart-checkout .shipping').show();
+			$('html,body').animate({scrollTop: $('.cart-checkout .shipping').offset().top},'slow');
+		});
+		$(".cart-checkout .shipping .lanjutkan").click(function(){
+			$('.cart-checkout .billing').show();
+			$('html,body').animate({scrollTop: $('.cart-checkout .billing').offset().top},'slow');
+		});
     </script>
 
         <?php $this->load->view('front/slice/footer'); ?>
