@@ -1198,7 +1198,7 @@
 							?>
 							<select id="jenis_kertas" onchange="cek_harga(this)" name="jenis_kertas" required> 
 								<?php
-								echo "<option value='0'>Silahkan Pilih</option>";
+								echo "<option value=''>Silahkan Pilih</option>";
 								while ($row = mysql_fetch_array($result)) {
 									echo "<option value=" . $row['id_kertas'] . " ".set_select('id_kertas',  $row['id_kertas']).">" . $row['kertas_nama'] . "</option>";
 								}

@@ -16,7 +16,7 @@
 			</div>
 			<div class="stage two">
 				<div class="round-container">
-					<a href="/front/checkout/checkout_upload_image">
+					<a href="#">
 						<span class="round">2</span>
 					</a>
 				</div>
@@ -24,7 +24,7 @@
 			</div>
 			<div class="stage three">
 				<div class="round-container">
-					<a href="/front/checkout/checkout_pembayaran">
+					<a href="#">
 						<span class="round">3</span>
 					</a>
 				</div>
@@ -76,7 +76,7 @@
 						</div>
 					</div>
 					<div class="clear"></div>
-					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+					<a href="<?php echo site_url("/front/checkout/checkout_cart_order/"); ?> ">
 						<div class="lanjutkan">
 							<span>Lihat</span>
 						</div>
@@ -93,7 +93,7 @@
 						</div>
 					</div>
 					<div class="clear"></div>
-					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+					<a href="#">
 						<div class="lanjutkan">
 							<span>Lihat</span>
 						</div>
@@ -110,7 +110,7 @@
 						</div>
 					</div>
 					<div class="clear"></div>
-					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+					<a href="<?php echo site_url("front/checkout/checkout_pembayaran_edit/"); ?> ">
 						<div class="lanjutkan">
 							<span>Lihat</span>
 						</div>
@@ -128,7 +128,7 @@
 						</div>
 					</div>
 					<div class="clear"></div>
-					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">
+					<a href="<?php echo site_url("front/checkout/checkout_pembayaran_edit2/"); ?> ">
 						<div class="lanjutkan">
 							<span>Lihat</span>
 						</div>
@@ -203,8 +203,8 @@
 				<div class="cart-container">
 				<img src="<?php echo base_url(); ?>include/front/images/checkout/pembayaran.jpg">
 				<span>
-					<a href="<?php echo site_url("/front/checkout/checkout_pembayaran/"); ?> ">Perlihatkan detail keranjang</a>
-				</span>
+					<a href="<?php echo site_url("/front/checkout/checkout_cart_order/"); ?> ">Perlihatkan detail keranjang</a>
+				</span-->
 				<?php
 				foreach($cart as $val)
 				{
@@ -221,6 +221,10 @@
 									<li>
 										<label>Tipe Kertas</label>
 										<span>: <?php echo $val->kertas_nama; ?></span>
+									</li>
+									<li>
+										<label>Laminasi</label>
+										<span>: <?php echo $val->laminasi; ?></span>
 									</li>
 									<li>
 										<label>Sisi Cetak</label>

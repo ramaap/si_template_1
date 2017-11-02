@@ -85,13 +85,6 @@ if ($this->session->userdata('alert') != '')
 	</div>
 
 	<script type="text/javascript">
-		var $toEqualize = $('.column');
-		$toEqualize.css('height', (function(){
-		return Math.max.apply(null, $toEqualize.map(function(){
-		return $(this).height();
-		}).get());
-		})());
-		
 		function sign_up()
 		{
 			window.location.replace("<?php echo site_url('front/sign_up'); ?>");

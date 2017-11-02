@@ -39,6 +39,29 @@
 		</div>
 	</div>
 
+	<script type="text/javascript">
+		var interval = null
+		$(document).ready(function(){
+			interval = setInterval(columnHeight,10);
+		});
+		function columnHeight(){
+			var checkload = $('.column.images');
+			if (checkload.length == 0) {
+				return;
+			}
+			if(checkload.length > 0){
+				var $columnImageHeight= $('.column.images').outerHeight();
+				var $columnActionHeight= $('.column.info-action').outerHeight();
+
+				if ($columnImageHeight > $columnActionHeight ) {
+					$('.column.info-action').outerHeight($columnImageHeight);
+				}else{
+					$('.column.images').outerHeight($columnActionHeight);
+				}
+				clearInterval(interval);
+			}
+		}
+    </script>
         <?php $this->load->view('front/slice/footer'); ?>
 </body>
 </html>

@@ -196,7 +196,7 @@
 			</div>
 			<div class="stage two">
 				<div class="round-container">
-					<a href="/front/checkout/checkout_upload_image">
+					<a href="#">
 						<span class="round">2</span>
 					</a>
 				</div>
@@ -204,7 +204,7 @@
 			</div>
 			<div class="stage three">
 				<div class="round-container">
-					<a href="/front/checkout/checkout_pembayaran">
+					<a href="#">
 						<span class="round">3</span>
 					</a>
 				</div>
@@ -262,6 +262,10 @@
 									<li>
 										<label>Tipe Kertas</label>
 										<span>: <?php echo $val->kertas_nama; ?></span>
+									</li>
+									<li>
+										<label>Laminasi</label>
+										<span>: <?php echo $val->laminasi; ?></span>
 									</li>
 									<li>
 										<label>Sisi Cetak</label>
@@ -446,15 +450,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		var $toEqualize = $('.column');
-		$toEqualize.css('height', (function(){
-		return Math.max.apply(null, $toEqualize.map(function(){
-		return $(this).height();
-		}).get());
-		})());
-    </script>
 
     <script type="text/javascript">
 		$(".cart-checkout .cart-container .lanjutkan").click(function(){
