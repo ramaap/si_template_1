@@ -190,13 +190,6 @@
 				pager:false
 		  });
 		});
-
-		var $toEqualize = $('.column');
-		$toEqualize.css('height', (function(){
-		return Math.max.apply(null, $toEqualize.map(function(){
-		return $(this).height();
-		}).get());
-		})());
 	</script>
 
         <?php $this->load->view('front/slice/footer'); ?>

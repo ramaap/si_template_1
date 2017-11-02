@@ -246,6 +246,19 @@ a.control_next {
     float: left;
     text-align: center;
 }
+.checkout-2 .preview .sides .front img,
+.checkout-2 .preview .sides .back img{
+    display: none;
+}
+.checkout-2 .preview .sides .beforeselectimage{
+    max-width: 200px;
+    max-height: 110px;
+    margin: 20px auto;
+    position: relative;
+    background: white;
+    width: 200px;
+    height: 110px;
+}
 .checkout-2 #dialog.lnv-dialog-confirm .lnv-dialog{
     max-width: 480px;
 }
@@ -266,15 +279,28 @@ a.control_next {
     right: 13px;
 }
 .checkout-3 .cart-checkout .cart-container .lanjutkan{
-    bottom: 95px;
+    bottom: 70px;
 }
 .cart-checkout .pembayaran .lanjutkan{
     width: 180px;
 }
-.cart-checkout .shipping,
-.cart-checkout .billing{
+.checkout-3 .cart-checkout .shipping,
+.checkout-3 .cart-checkout .billing{
     display: none;
 }
+
+.checkout-3.edit .cart-checkout .shipping,
+.checkout-3.edit .cart-checkout .billing{
+    display: block;
+}
+.checkout-3 .billing input.checkbox{
+    float: left;
+}
+.checkout-3 .billing ul{
+    overflow: hidden;
+}
+
+
 .cart-checkout .login,
 .cart-checkout .cart-container,
 .cart-checkout .shipping,
@@ -798,6 +824,10 @@ body.checkout-5 .bx-wrapper .bxslider h2{
     .checkout-3 .cart-checkout .cart-container .lanjutkan{
         bottom: 75px;
     }
+    .checkout-3.edit .billing,
+    .checkout-3.edit .shipping{
+        display: block;
+    } 
     .cart-checkout .lanjutkan{
         right: 33px;
     }

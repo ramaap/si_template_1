@@ -95,13 +95,14 @@ class checkout_pembayaran extends CI_Controller {
 				$ukuran = $val->ukuran;
 				$jenis_kertas = $val->jenis_kertas;
 				$jumlah = $val->jumlah;
+				$laminasi = $val->laminasi;
 				$sisi_cetak = $val->sisi_cetak;
 				$harga = $val->harga;
 				$tambahan_ket = $val->tambahan_ket;
 				$harga_tambahan = $val->harga_tambahan;
 				$harga_total = $val->harga_total;
 				
-				$detilDetil = $this->order_detail($order_id,$foto_front,$foto_back,$nama,$ukuran,$jenis_kertas,$jumlah,$sisi_cetak,$harga,$tambahan_ket,$harga_tambahan,$harga_total);
+				$detilDetil = $this->order_detail($laminasi,$order_id,$foto_front,$foto_back,$nama,$ukuran,$jenis_kertas,$jumlah,$sisi_cetak,$harga,$tambahan_ket,$harga_tambahan,$harga_total);
 				
 				$this->data_checkout->insert_detail_order($detilDetil);
 				$this->data_checkout->delete_permanent_cart($val->cart_id);
@@ -212,8 +213,9 @@ class checkout_pembayaran extends CI_Controller {
         );
         return $dataData;
     }
-	public function order_detail($order_id=0,$foto_front="",$foto_back="",$nama="",$ukuran="",$jenis_kertas=0,$jumlah="",$sisi_cetak=0,$harga=0,$tambahan_ket="",$harga_tambahan=0,$harga_total=0) {
+	public function order_detail($laminasi="",$order_id=0,$foto_front="",$foto_back="",$nama="",$ukuran="",$jenis_kertas=0,$jumlah="",$sisi_cetak=0,$harga=0,$tambahan_ket="",$harga_tambahan=0,$harga_total=0) {
 		$dataData = array(
+			'laminasi' =>  urldecode($laminasi),
 			'order_id' =>  urldecode($order_id),
 			'foto_front' => urldecode($foto_front),
 			'foto_back' => urldecode($foto_back),

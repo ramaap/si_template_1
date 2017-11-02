@@ -22,6 +22,8 @@ class checkout_business_card extends CI_Controller {
 	public function add() {
         $this->lib->check_session_customer();
 				$this->session->set_userdata("nama", "Original Business Card");
+				if($_POST["laminasi"] == "")
+					$_POST["laminasi"] = "Tidak";
 				$this->session->set_userdata("laminasi", urldecode($_POST["laminasi"]));
 				$this->session->set_userdata("ukuran", urldecode($_POST["ukuran"]));
 				$this->session->set_userdata("jenis_kertas", urldecode($_POST["jenis_kertas"]));

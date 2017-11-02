@@ -7,7 +7,7 @@
 	function check_form(){
 		 lnv.confirm({
 			title: 'Konfirmasi',
-			content: 'Apakah Anda Yakin dengan Desain yang Anda Upload? <br/> Kami tidak bertanggung jawab terhadap pelanggaran hak cipta dari konten desain yang Anda upload',
+			content: 'Apakah Anda Yakin dengan Desain yang Anda Upload? <br/> Kami tidak bertanggung jawab terhadap pelanggaran <br/> hak cipta dari konten desain yang Anda upload',
 			confirmBtnText: 'Confirm',
 			confirmHandler: function(){
 				$('#button').trigger('click');
@@ -151,11 +151,13 @@
 			<div class="preview">
 				<div class="images sides">
 					<div class="front">
+					    <div class="beforeselectimage"></div>
 						<img id="front" src="#" alt="your image" />
 						<br/>
 						<span>Front</span>
 					</div>
 					<div class="back">
+						<div class="beforeselectimage"></div>
 						<img id="back" src="#" alt="your image" />
 						<br/>
 						<span>Back</span>
@@ -186,31 +188,31 @@
 				function readURLfront(input) {
 				    if (input.files && input.files[0]) {
 				        var reader = new FileReader();
-				        
 				        reader.onload = function (e) {
 				            $('#front').attr('src', e.target.result);
 				        }
-				        
 				        reader.readAsDataURL(input.files[0]);
 				    }
 				}
 				function readURLback(input) {
 				    if (input.files && input.files[0]) {
 				        var reader = new FileReader();
-				        
 				        reader.onload = function (e) {
 				            $('#back').attr('src', e.target.result);
 				        }
-				        
 				        reader.readAsDataURL(input.files[0]);
 				    }
 				}
 
 				$("#imgInpfront").change(function(){
 				    readURLfront(this);
+					$(".preview .sides .front img#front").css('display','block');
+					$(".preview .sides .front .beforeselectimage").css('display','none');
 				});
 				$("#imgInpback").change(function(){
 				    readURLback(this);
+					$(".preview .sides .back img#back").css('display','block');
+					$(".preview .sides .back .beforeselectimage").css('display','none');
 				});
 			</script>
 

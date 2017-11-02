@@ -69,6 +69,18 @@ class data_cart extends CI_Model {
 		
 	}
 	
+	public function delete_permanent_transaksi($order_detail_id)
+	{  
+		$data_lama=$this->db->query('select * from transaksi_detail where order_detail_id="'.$order_detail_id.'"')->num_rows();
+		$temp = 0;
+		$data = array('order_detail_id' => $order_detail_id);
+		$this->db->delete('transaksi_detail', $data);
+		if($temp==0&&$data_lama>0) //kalau tidak ada perubahan cek data dengan id itu ada g. kalau ada dianggap ada perubahan data
+		$temp=1; 
+		
+	    return $temp;
+		
+	}
 	public function delete_semu($cart_id)
 	{
 		$data_lama=$this->db->query('select * from data_cart where cart_id="'.$cart_id.'"')->num_rows();
@@ -96,6 +108,21 @@ class data_cart extends CI_Model {
         $this->db->where('cart_id', $cart_id);
         $temp=$this->db->update('data_cart', $data); 
 		$this->session->set_userdata("last_id",$cart_id);
+	   
+		if($temp==0&&$data_lama>0) //kalau tidak ada perubahan cek data dengan id itu ada g. kalau ada dianggap ada perubahan data
+		$temp=1;
+		
+	   return $temp;
+	} 
+	public function update_transaksi($order_id, $data)
+	{
+		$data_lama=$this->db->query('select * from transaksi where order_id="'.$order_id.'"')->num_rows();
+		
+        /* $this->script_sql->update($data,"cart","cart_id",$cart_id); */
+	   
+        $this->db->where('order_id', $order_id);
+        $temp=$this->db->update('transaksi', $data); 
+		$this->session->set_userdata("last_id",$order_id);
 	   
 		if($temp==0&&$data_lama>0) //kalau tidak ada perubahan cek data dengan id itu ada g. kalau ada dianggap ada perubahan data
 		$temp=1;

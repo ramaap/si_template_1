@@ -138,6 +138,7 @@ body.product-detail .main.container .side .images{
     width: 52%;
     float: left;
     margin-right: 20px;
+    height: auto;
 }
 body.product-detail .main.container .side .info-action{
     width: 40%;

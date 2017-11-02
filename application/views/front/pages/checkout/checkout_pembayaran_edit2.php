@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php $this->load->view('front/slice/head_checkout'); ?>
-<body class="checkout-3">
+<body class="checkout-3 edit">
 <?php $this->load->view('front/slice/menu'); ?>
 
  <script type="text/javascript">
@@ -157,15 +157,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		var $toEqualize = $('.column');
-		$toEqualize.css('height', (function(){
-		return Math.max.apply(null, $toEqualize.map(function(){
-		return $(this).height();
-		}).get());
-		})());
-    </script>
 
         <?php $this->load->view('front/slice/footer'); ?>
 </body>
